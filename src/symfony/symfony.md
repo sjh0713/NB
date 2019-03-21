@@ -1,7 +1,30 @@
 # symfony笔记
 
-- [symfony](./symfony.md) symfon相关
+对象取值：
+$valve_token[0]->getId()
 
-- [macdown](./syntax.md) Macdown相关
 
-- [文档链接](./studyUrl.md) 文档相关链接
+数据库查询：
+$valve_token = $em->getRepository('ValveBundle:ValveToken')
+    ->findBy(
+        [],
+        ['createAt'=>'asc'],
+        ['limit'=>1]
+    );
+
+
+服务：
+
+命令：
+
+Repository：
+
+
+
+
+
+
+
+
+
+
