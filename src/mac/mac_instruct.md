@@ -27,6 +27,10 @@ Mac常用命令：
 	cmd + option + b : 屏幕回放
 	在访达中输入路径：command+shift+Gs
 
+当前和root用户的切换：
+当前用户到root：sudo su
+root到当前用户：su - myl
+
 
 目录： /usr/local/Cellar用来存放brew安装的
 
