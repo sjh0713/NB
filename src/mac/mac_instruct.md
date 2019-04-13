@@ -2,6 +2,7 @@
 	ln -s 要链接的路径 原来的路径
 
 Mac常用命令：
+
 	cmd + enter : 全屏切换
 	cmd + f : 查找，被查找内容会被自动复制
 	cmd + d : 垂直分屏 cmd + shift + d : 水平分屏

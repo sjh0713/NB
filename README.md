@@ -1,11 +1,19 @@
+<style>
+	a{
+    text-decoration: none;
+    }
+</style>
+##<img src="https://github.githubassets.com/images/icons/emoji/unicode/1f418.png" style="width:50px"> cheat sheets
 
-# 笔记
+- # symfony
+	
 
-- ### symfony
-	1. [symfony](./src/symfony/symfony.md) symfon相关
-	2. [command](./src/symfony/command.md) 命令
-	3. [Guzzle](./src/symfony/symfony.md) 请求接口
-	4. [SQL](./src/symfony/SQL.md) 数据库操作
+	*  Basic 基础和常用
+		1. [Basic](./src/symfony/symfony.md) 基础知识点
+		2. [Shortcuts Methods](./src/symfony/controller.md) 控制器中的快捷方法
+		2. [command](./src/symfony/command.md) 命令
+		3. [Guzzle](./src/symfony/symfony.md) 请求接口
+		4. [SQL](./src/symfony/SQL.md) 数据库操作
 
 - ### PHP
 
