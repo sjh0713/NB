@@ -1,0 +1,362 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/scheduling.css?v=1027'|theme) }}" />
+<link rel="stylesheet" href="{{ asset('public/pintuer2/css/pintuer.css') }}">
+<title></title>
+	<style>
+		.input_kssj,.input_jssj{
+			width: 35%;
+			display: inline-block;
+			height: 34px !important;
+		}
+		.insitution_style {
+			height: 50px;
+			line-height: 50px;
+		}
+		.append{
+			width: 200px;
+			height: 50px;
+		}
+		.auto{
+			padding-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="auto">
+			<table style="width: 100%;">
+				<tr class="insitution_style">
+					<td class="insitution">
+						<div class="wt-98">
+							<span class="right">机构</span>
+							<div class="both"></div>
+						</div>
+					</td>
+					<td class="location" colspan="2">
+						<div class="wt-98" style="">
+							<input type="text" name="institution_name" disabled="disabled" class="left input" value="{{ authenast.name }}" />
+							<input type="hidden" name="institution_id" id="institution_id" class="left input" value="{{ authenast.id }}" />
+							<div class="both"></div>
+						</div>
+					</td>
+				</tr>
+				<tr class="insitution_style">
+					<td class="insitution">
+						<div class="wt-98">
+							<span class="right">值班日期</span>
+							<div class="both"></div>
+						</div>
+					</td>
+					<td class="location" colspan="2">
+						<div class="wt-98">
+							<input type="text" name="date" class="left input date" disabled="disabled"  value="{{ date }}" />
+							<div class="both"></div>
+						</div>
+					</td>
+				</tr>
+				<tr class="insitution_style">
+					<td class="insitution">
+						<div class="wt-98">
+							<span class="right gzs_span">工作时</span>
+							<div class="both"></div>
+						</div>
+					</td>
+					<td class="location" colspan="2">
+						<div class="wt-98">
+							{#<input type="text" autocomplete="off" class="input input_kssj Wdate" onclick="WdatePicker({skin:'whyGreen',dateFmt:'H:mm'})" placeholder="开始时间" value="{% if setwork is not empty %}{{ setwork.worktime|date('H:i')|default('09:00') }}{% endif %}"/> -#}
+							{#<input type="text" autocomplete="off" class="input input_jssj Wdate" onclick="WdatePicker({skin:'whyGreen',dateFmt:'H:mm'})"  placeholder="结束时间" value="{% if setwork is not empty %}{{ setwork.casualtime|date('H:i')|default('17:00') }}{% endif %}"/>#}
+
+							<input type="text" autocomplete="off" class="input input_kssj Wdate" onclick="WdatePicker({skin:'whyGreen',dateFmt:'H:mm',onpicking:function(dp){start_date(dp.cal.getNewDateStr())}})" placeholder="开始时间" value="{% if setwork is not empty %}{{ setwork.worktime|date('H:i')|default('09:00') }}{% endif %}"/> -
+							<input type="text" autocomplete="off" class="input input_jssj Wdate" onclick="WdatePicker({skin:'whyGreen',dateFmt:'H:mm',onpicking:function(dp){end_date(dp.cal.getNewDateStr())}})"  placeholder="结束时间" value="{% if setwork is not empty %}{{ setwork.casualtime|date('H:i')|default('17:00') }}{% endif %}"/>
+							<div class="both"></div>
+						</div>
+					</td>
+				</tr>
+				<tr class="insitution_style">
+					<td class="insitution">
+						<div class="wt-98">
+							<span class="right">值班人员</span>
+							<div class="both"></div>
+						</div>
+					</td>
+					<td class="location bg-07" style="width:20%;">
+						{% if areas is empty %}
+						<div class="wt-98 region-style" style="top:0;">
+							<label><input type="radio" name="type_department" class="type_department" value="0" />跨区域选择</label>
+							<label><input type="radio" class="region" name="type_department"  class="type_department" value="1" checked="checked"/>本区域选择</label>
+						</div>
+						{% else %}
+						<div class="wt-98 choice" >
+							<select name="districts" id="districts" autocomplete="off">
+							    {% for val in areas  %}
+								<option value="{{ val.areacode }}" {% if default_area == val.areacode %}selected="selected"{% endif %}>{{ val.areaname }}</option>
+								{% endfor %}
+							</select>
+						</div>
+						{% endif %}
+					</td>
+					<td class="location bg-white" style="width:15%;">
+						<div class="wt-98 choice">
+							<select name="user" id="user" autocomplete="off">
+								<option value="0">请选择</option>
+								{% for vo in info %}
+										<option value="{{ vo.id }}" {% if app.request.query.get('id_u') == vo.id %}selected="selected"{% endif %}>{{ vo.truename }}</option>
+								{% endfor %}
+							</select>
+						</div>
+					</td>
+				</tr>
+				<tr class="insitution_style">
+					<td class="insitution">
+						<div class="wt-98">
+							<span class="right">排班日期</span>
+							<div class="both"></div>
+						</div>
+					</td>
+					<td class="location" colspan="2">
+						<div class="wt-98">
+							<span class="left"> {{ 'now' | date('Y-m-d H:i:s') }}</span>
+							<div class="both"></div>
+						</div>
+					</td>
+				</tr>
+				<tr class="insitution_style">
+					<td class="insitution">
+						<div class="wt-98">
+							<span class="right">排班人</span>
+							<div class="both"></div>
+						</div>
+					</td>
+					<td class="location" colspan="2">
+						<div class="wt-98">
+							<span class="left">{{ app.user.xM }}</span>
+							<div class="both"></div>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div class="append-style">
+				<button class="append" style="border:0;" >确定</button>
+			</div>
+	</div>
+</body>
+<script src="{{ asset('public/pintuer2/js/jquery.js') }}"></script>
+<script src="{{ asset('public/layer/layer.js') }}"></script>
+<script>
+    var level='{{ authenast.level }}';
+
+    if(level=="3"){
+        $(".gzs_span").html('<font style="color: red;">(不低于8小时)</font>工作时');
+    }else if(level=="4"){
+        $(".gzs_span").html('<font style="color: red;">(不低于4小时)</font>工作时');
+    }
+
+	$(function(){
+        $(".region-style input[type=radio]").on("click",function () {
+            var val_input=$(this).val();
+            if(val_input=="0"){
+                $("#user").val(0);
+                $("#districts").val(0);
+                $("#user").attr("disabled",true);
+                $("#districts").attr("disabled",false);
+            }else{
+                $("#user").val(0);
+                $("#districts").val(0);
+                $("#user").attr("disabled",false);
+                $("#districts").attr("disabled",true);
+            }
+        })
+        console.log("name_u="+GetRequest("name_u")+"id_u="+GetRequest("id_u")+"time_u="+GetRequest("time_u"));
+        var time_u=GetRequest("time_u");
+        var id_u=GetRequest("id_u");
+        var name_u=GetRequest("name_u");
+        if(time_u!=null&&time_u!=""&&time_u!=undefined){
+            var arr_time_u=time_u.split("-");
+            $(".input_kssj").val(arr_time_u[0]);
+            $(".input_jssj").val(arr_time_u[1]);
+		}
+        if(id_u!=null&&id_u!=""&&id_u!=undefined){
+            var arr_id_u=id_u;
+            $("#user").val(arr_id_u);
+        }
+	})
+
+	$('.append').click(function(){
+		var type =  $("input[name='type_department']:checked").val();
+		if(type == 0){
+			var user_id = 0;
+			var user_name = '跨区域选择';
+			var work_time = '';
+		}else{
+			var user_id = $('#user option:selected').val();
+			if(user_id < 1){
+				layer.msg('请选择人员');
+				return false;
+			}
+			var user_name = $('#user option:selected').text();
+			//var work_time = $('#worktime').val();
+            var work_time = $(".input_kssj").val()+"-"+$(".input_jssj").val();
+		}
+		var input_kssj=$(".input_kssj").val();
+        var input_jssj=$(".input_jssj").val();
+        if(!timeComparison()){
+            return false;
+		}
+
+		var date =$(".date").val();
+		var uid = "{{ app.request.query.getInt('uid') }}";
+		if(uid > 0){
+			parent.window.call_update_back(user_id,user_name,work_time,date, uid);
+		}else{
+			parent.window.call_back(user_id,user_name,work_time,date);
+		}
+
+		_close();
+	})
+	function _close() {
+        var index = parent.layer.getFrameIndex(window.name);
+        parent.layer.close(index);
+    }
+</script>
+<script>
+   function start_date(str){
+       var start = str;
+       var end = $('.input_jssj').val();
+       isrepeat(start,end);
+   }
+   function end_date(str){
+       var end = str;
+       var start = $('.input_kssj').val();
+       isrepeat(start,end);
+   }
+   function isrepeat(kssj,jssj){
+       //alert("kssj"+kssj+";jssj"+jssj);
+       var uid = $('#user').val();
+       var date = $('.date').val();
+	   var start_time = kssj;
+	   var end_time = jssj;
+
+       var institution_id = $("#institution_id").val();
+       var sche_id = {{ sch_id }}
+       console.log("uid="+uid+"date="+date+"start_time"+start_time+'end_time'+end_time);
+       $.post('{{ path('scheduling_scheduling_check') }}',{uid:uid,date:date,start:start_time,end:end_time,eid:institution_id,sche_id:sche_id},
+           function(result){
+               if(result.code == 0){
+                   // layer.confirm(result.msg,{
+                   //   	btn: ['重新选择'] //按钮
+                   // }, function(){
+                   // 	location.reload();
+                   // 	// $("#user").val(0);
+                   // });
+                   layer.open({
+                       title:"信息",
+                       content: result.msg,
+                       move: false,
+                       btn: ['重新选择'],
+                       btn1: function(index){
+                           location.reload();
+                           layer.close(index);
+                       },
+                       cancel: function(){
+                           location.reload();
+                       }
+                   });
+               }
+           }
+       )
+   }
+   $('#user').on('change',isrepeat);
+   $('.input_kssj').on('change',isrepeat)
+   $('.input_jssj').on('change',isrepeat)
+   $('#districts').on('change',function(){
+	   var id = $(this).val();
+		$.post('{{ path('scheduling_scheduling_select') }}',{area_id:id},
+			function(result){
+				if(result.code == 1){
+					var html = '';
+					html='<option value="0">请选择</option>';
+					for(i = 0; i < result.data.length; i++){
+						html += '<option value="'+result.data[i].id+'">'+result.data[i].truename+'</option>';
+					}
+					$('#user').html(html);
+				}else{
+					// layer.confirm(result.msg, {
+					// 	btn: ['重新选择'] //按钮
+					// }, function(){
+                    //     // $("#user").val(0);
+					// 	location.reload();
+					// });
+                    layer.open({
+                        title:"信息",
+                        content: result.msg,
+                        move: false,
+                        btn: ['重新选择'],
+                        btn1: function(index){
+                            location.reload();
+                            layer.close(index);
+                        },
+                        cancel: function(){
+                            location.reload();
+                        }
+                    });
+				}
+			}
+		)
+   })
+</script>
+<script src="{{ asset('public/mydatepic/WdatePicker.js') }}"></script>
+<script>
+    function timeComparison(){
+        var time=new Date();
+        var input_kssj=$(".input_kssj").val();
+        var input_jssj=$(".input_jssj").val();
+        if (input_kssj==undefined||input_kssj==null||input_kssj=="") {
+            layer.msg("请输入开始时间");
+            return false;
+        }
+        if (input_jssj==undefined||input_jssj==null||input_jssj=="") {
+            layer.msg("请输入结束时间");
+            return false;
+        }
+        var kssj=time.getFullYear()+"/"+time.getMonth()+"/"+time.getDate()+" "+input_kssj;
+        var jssj=time.getFullYear()+"/"+time.getMonth()+"/"+time.getDate()+" "+input_jssj;
+        //console.log("当前时间===="+time.getTime());
+        //console.log("kssj===="+new Date(kssj).getTime());
+        //console.log("jssj===="+new Date(jssj).getTime());
+        var newkssj=new Date(kssj).getTime();
+        var newjssj=new Date(jssj).getTime();
+
+		if(level=="3"){
+            var hour_num=8;
+		}else if(level=="4"){
+            var hour_num=4;
+		}
+
+        var Four=1000*60*60*hour_num;
+        if((newkssj+Four)<=newjssj){
+            return true;
+        }else{
+            layer.msg("排班时间应大于"+hour_num+"小时");
+            return false;
+        }
+    }
+
+
+</script>
+<script>
+    function GetRequest(value) {
+        var url = decodeURI(location.search); //?id="123456"&Name="bicycle";
+        var object = {};
+        if(url.indexOf("?") != -1) //url中存在问号，也就说有参数。
+        {
+            var str = url.substr(1); //得到?后面的字符串
+            var strs = str.split("&"); //将得到的参数分隔成数组[id="123456",Name="bicycle"];
+            for(var i = 0; i < strs.length; i++) {
+                object[strs[i].split("=")[0]] = strs[i].split("=")[1]
+            }
+        }
+        return object[value];
+    }
+</script>
+</html>

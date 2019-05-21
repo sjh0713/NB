@@ -1,19 +1,16 @@
-<style>
-	a{
-    text-decoration: none;
-    }
-</style>
-##<img src="https://github.githubassets.com/images/icons/emoji/unicode/1f418.png" style="width:50px"> cheat sheets
+# <img src="https://github.githubassets.com/images/icons/emoji/unicode/1f418.png" style="width:50px">  cheat sheets :memo:
 
-- # symfony
-	
 
-	*  Basic 基础和常用
-		1. [Basic](./src/symfony/symfony.md) 基础知识点
-		2. [Shortcuts Methods](./src/symfony/controller.md) 控制器中的快捷方法
-		2. [command](./src/symfony/command.md) 命令
-		3. [Guzzle](./src/symfony/symfony.md) 请求接口
-		4. [SQL](./src/symfony/SQL.md) 数据库操作
+1.  [symfony](src/symfony/README.md "symfony") 
+	- [Basic](src/symfony/Basic/README.md) 基础和常用
+		- [Basic](./src/symfony/Basic/symfony.md) 基础知识点
+		- [Shortcuts Methods](./src/symfony/controller.md) 控制器中的快捷方法
+		- [command](./src/symfony/command.md) 命令
+		- [Guzzle](./src/symfony/symfony.md) 请求接口
+		- [SQL](./src/symfony/SQL.md) 数据库操作
+
+
+
 
 - ### PHP
 
@@ -28,7 +25,7 @@
 - ### MAC相关操作
 
 	1. [macdown](./src/Markdown-Syntax-CN-master/syntax.md) Macdown相关
-	2. [mac快捷键](./src/mac/mac_instruct.md) 快捷键
+	2. [mac快捷键](src/Linux/mac_instruct.md) 快捷键
 
 - ### MYSQL
 

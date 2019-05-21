@@ -1,0 +1,855 @@
+小程序地址：https://fawang.zhuoyukeji.cn/
+
+1.用户登陆:
+请求地址：/api/login/
+请求类型：post
+参数：
+	type 人员类型,公众登录0，服务人员是1
+	username 用户账号
+	password 密码
+返回值
+失败
+	code != 1,提示msg信息
+	code == 500
+	{
+	    "code": 500,
+	    "msg": "请选择正确的人员类型"
+	}
+登陆成功
+	code == 1
+	{
+	    "code": 1,
+	    "msg": "登录成功",
+	    "data": {
+	        "token": "SWtHOFlYaVRYZ011RjlweG1OeXZXSXRmdUpSSGZaV2NVdlhKUmI4TnJhZz0="
+	    }
+	}
+
+2.退出登陆：
+地址：/api/login/logout
+返回值：
+    {
+        "code": 1,
+        "msg": "退出成功"
+    }
+
+3.修改密码：
+地址：/api/login/repassword
+请求类型：post
+参数：
+	username 用户账号
+	password 旧密码
+	new_password 新密码
+	repassword 新密码
+返回值：
+    {
+        "code": 1,
+        "msg": "修改成功"
+    }
+
+4.忘记密码：
+（1）验证码（4位）：
+地址：/api/login/code
+请求类型：post
+参数：
+    无
+返回值：
+{
+    "code": 1,
+    "msg": "获取成功",
+    "data": {
+        "base64": "data:image/jpeg;base64,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",
+        "category": "a4b3793b1eb9f85225f4b829ec1088dd"
+    }
+}
+(2)忘记密码第一步：
+地址：/api/login/forget
+请求类型：post
+参数：
+    tell 手机号码
+    code 输入的验证码
+    category 加密的category
+返回值：
+    {
+        "code": 1,
+        "msg": "成功"
+    }
+    {
+        "code": 3,
+        "msg": "验证码不正确"
+    }
+(3)发送短信验证码：
+地址：/api/login/send
+请求类型：post
+参数：
+    tell 手机号码
+返回值：
+    {
+        "code": 1,
+        "msg": "发送成功",
+        'code_token':'....'
+    }
+(4)重置密码
+地址：/api/login/reset
+请求类型：post
+参数：
+    tell 手机号码
+    code 手机验证码
+    code_token code_token
+    password 密码
+    repassword 密码
+返回值：
+    {
+        "code": 1,
+        "msg": "修改成功"
+    }
+    {
+        "code": 2,
+        "msg": "短信验证码错误"
+    }
+
+5.个人中心(个人资料)：
+地址：/api/center/
+请求类型：post
+参数：
+	token
+返回值：
+	{
+	    "code": 1,
+	    "msg": "成功",
+	    "data": {
+	        "name": "马玉亮",
+	        'mobile':'',
+	        'user_type':'',
+	        "portrait": null
+	    }
+	}
+
+
+7.系统通知列表页：
+地址：/api/notice/
+请求类型：post
+参数：
+	token
+返回值：
+	{
+	    "code": 1,
+	    "msg": "暂无信息",
+	    "data": ""
+	}
+	{
+	    "code": 1,
+	    "msg": "成功",
+	    "data": [
+	        {
+	            "id": "6",
+	            "title": "上线通知",
+	            "content": "<p>测试</p>",
+	            "look": ",3322,",
+	            "create_at": "2019-05-10 21:00",
+	            "is_read": 1 	//是否已读 1已读 2未读
+	        }
+	    ]
+	}
+
+8.系统通知详情页:
+地址：/api/notice/show
+请求类型：post
+参数：
+	token
+	id 通知ID
+返回值：
+	{
+	    "code": 1,
+	    "msg": "成功",
+	    "data": [
+	        {
+	            "id": "6",
+	            "title": "上线通知",
+	            "content": "<p>测试</p>",
+	            "look": ",3322,",
+	            "create_at": "2019-05-10 21:00",
+	            "is_read": 1
+	        }
+	    ]
+	}
+
+/************************** 考勤：5个接口 *****************************/
+
+1.当天考勤列表
+地址：/api/attendance/list
+请求类型：post
+参数：
+	token
+返回值：
+	{
+	    "code": 1,
+	    "msg": "成功",
+	    "data": {
+	        "status": 1,
+	        "date": {
+	            "week": "星期五",
+	            "date": "2019年05月10日"
+	        }
+	    }
+	}
+	{
+	    "code": 1,
+	    "msg": "成功",
+	    "data": {
+	        "code": 107,
+	        "status": 2,
+	        "date": {
+	            "week": "星期五",
+	            "date": "2019年05月10日"
+	        },
+	        "attend": {
+	            "intTime": "09:00",
+	            "outTime": "22:59"
+	        }
+	    }
+	}
+备注：通过attend判断是否当天有排班，是否应该打卡
+	status为1 当天不用签到
+		2 当天有考勤但没签到
+		3 有考勤
+
+2.判断考勤是否迟到：
+地址：/api/attendance/late
+请求类型：post
+参数：
+	token
+	intTime 签到时间
+    type 类型 1签到 2签退
+返回：
+	{
+		'code' => 1,
+	    'msg'=>'请填写迟到理由',
+	    'state'=>2 //状态1为正常，2为迟到
+	} 
+    {
+        'code' => 1,
+        'msg'=>'确定要早退',
+        'state'=>2 //状态1为正常，2为迟到
+    }
+
+3.签到图片上传：
+地址：/api/attendance/upload
+请求类型：post
+参数：
+	path 图片file
+	position 位置信息（eg:山西省太原市小店区百花谷）
+返回值：
+    {
+	    "code": 1,
+	    "msg": "上传成功",
+	    "data": "uploads/image/attendance/2eedfad7e17c382032d06f2bd549179c.png.jpeg"
+	}
+
+4.签到、签退
+地址：/api/attendance/sign
+请求类型：post
+参数：
+	token
+	type 考勤类型 1签到 2签退
+	lon 经度
+	lat 纬度
+	position 位置信息
+	path 图片路径
+	reason 迟到理由
+返回值：
+    {
+        "code": 1,
+        "msg": "签到成功"
+    }
+
+5.历史考勤
+地址：/api/attendance/history
+请求类型：post
+参数：
+	token
+	attendId 考勤记录ID （历史详情的时候加该参数）
+返回值：
+	{
+    "code": 1,
+    "data": [
+        {
+            "id": 35,
+            "attendanceId": 3322,
+            "attendanceName": "闫立冬",
+            "instituId": 1058,
+            "instituName": "昭馀镇公共法律服务工作站",
+            "attendanceTime": "10:53",
+            "intTime": "14:00",
+            "outTime": "17:00",
+            "backTime": "10:57",
+            "date": "20190516",
+            "positionInt": "中国山西省晋中市祁县昌源北路",
+            "positionOut": null,
+            "lonInt": "112.346293",
+            "latInt": "37.373366",
+            "lonOut": null,
+            "latOut": null,
+            "pathInt": "uploads/image/attendance/ccf3b69bb39a3b2dd4e938ac971a1725.jpg.jpeg",
+            "pathOut": null,
+            "signInstatus": 4,
+            "signOutstatus": 5,
+            "reason": "",
+            "city": "140700",
+            "area": "140727",
+            "auditId": null,
+            "audit": null,
+            "auditTime": null,
+            "auditStatus": 0,
+            "dutyCity": null,
+            "dutyArea": null,
+            "createAt": {
+                "date": "2019-04-10 10:53:19.000000",
+                "timezone_type": 3,
+                "timezone": "PRC"
+            },
+            "updateAt": {
+                "date": "2019-05-16 20:11:51.000000",
+                "timezone_type": 3,
+                "timezone": "PRC"
+            },
+            "week_time": "2019-05-16",
+            "week_name": "星期四",
+            "in_name": "异常上报",
+            "out_name": "正常"
+        }
+    ]
+}
+
+/************************** 服务条款：1个接口 *****************************/
+
+1.服务条款：
+地址：/api/center/service
+请求类型：post
+参数：
+	token
+返回值：
+	{
+	    "code": 1,
+	    "msg": "暂无信息",
+	    "data": ""
+	}
+
+/************************** 咨询3个接口 *****************************/
+
+1.咨询列表：
+地址：/api/consult/
+请求类型：post
+参数：
+	token
+返回：
+{
+    "code": 1,
+    "msg": "成功",
+    "state":1  状态为1，
+    "data": [
+        {
+            "id": 97,
+            "content": "自己买的单元楼，需要办理银行按揭贷款，但自己马上要出去打工不在家，想让女儿帮忙自己办理这些手续，怎么办理授权？一定要公正吗？",
+            "createAt": "2019-04-15 09:43",
+            "status": 2,
+            "satisfaction": 1,
+            "satisfaction_name": "满意"
+        }
+    ]
+}
+
+2.咨询录入展示：
+地址：api/consult/consult
+请求类型：post
+参数：token
+返回：
+{
+    "code": 1,
+    "identity": [
+        {
+            "id": 493,
+            "codenum": "99",
+            "codename": "其他",
+            "parentcode": "0"
+        },
+        {
+            "id": 540,
+            "codenum": "1",
+            "codename": "妇女",
+            "parentcode": "0"
+        },
+        {
+            "id": 541,
+            "codenum": "2",
+            "codename": "残疾人",
+            "parentcode": "0"
+        },
+        {
+            "id": 542,
+            "codenum": "3",
+            "codename": "农民",
+            "parentcode": "0"
+        },
+        {
+            "id": 543,
+            "codenum": "4",
+            "codename": "农民工",
+            "parentcode": "0"
+        },
+        {
+            "id": 544,
+            "codenum": "5",
+            "codename": "老年人",
+            "parentcode": "0"
+        },
+        {
+            "id": 545,
+            "codenum": "6",
+            "codename": "未成年人",
+            "parentcode": "0"
+        },
+        {
+            "id": 546,
+            "codenum": "7",
+            "codename": "军人军属",
+            "parentcode": "0"
+        },
+        {
+            "id": 547,
+            "codenum": "8",
+            "codename": "少数民族",
+            "parentcode": "0"
+        },
+        {
+            "id": 548,
+            "codenum": "9",
+            "codename": "外国人或无国籍人",
+            "parentcode": "0"
+        }
+    ],
+    "types": [
+        {
+            "id": 549,
+            "codenum": "1",
+            "codename": "刑事",
+            "parentcode": "0"
+        },
+        {
+            "id": 557,
+            "codenum": "9",
+            "codename": "其它",
+            "parentcode": "0"
+        }
+    ],
+    "workNumber": "2019051508504",
+    "cate": [
+        {
+            "id": 72,
+            "name": "公司专长",
+            "parentCode": "0000",
+            "level": "1",
+            "status": "1",
+            "code": "1000",
+            "createAt": {
+                "date": "2019-05-04 20:23:11.000000",
+                "timezone_type": 3,
+                "timezone": "PRC"
+            },
+            "updateAt": {
+                "date": "2019-05-04 20:23:11.000000",
+                "timezone_type": 3,
+                "timezone": "PRC"
+            }
+        },
+        {
+            "id": 73,
+            "name": "民事相关",
+            "parentCode": "0000",
+            "level": "1",
+            "status": "1",
+            "code": "2000",
+            "createAt": {
+                "date": "2019-05-04 20:23:11.000000",
+                "timezone_type": 3,
+                "timezone": "PRC"
+            },
+            "updateAt": {
+                "date": "2019-05-04 20:23:11.000000",
+                "timezone_type": 3,
+                "timezone": "PRC"
+            }
+        },
+        {
+            "id": 74,
+            "name": "经济相关",
+            "parentCode": "0000",
+            "level": "1",
+            "status": "1",
+            "code": "3000",
+            "createAt": {
+                "date": "2019-05-04 20:23:11.000000",
+                "timezone_type": 3,
+                "timezone": "PRC"
+            },
+            "updateAt": {
+                "date": "2019-05-04 20:23:12.000000",
+                "timezone_type": 3,
+                "timezone": "PRC"
+            }
+        },
+        {
+            "id": 75,
+            "name": "刑事行政",
+            "parentCode": "0000",
+            "level": "1",
+            "status": "1",
+            "code": "4000",
+            "createAt": {
+                "date": "2019-05-04 20:23:11.000000",
+                "timezone_type": 3,
+                "timezone": "PRC"
+            },
+            "updateAt": {
+                "date": "2019-05-04 20:23:12.000000",
+                "timezone_type": 3,
+                "timezone": "PRC"
+            }
+        },
+        {
+            "id": 76,
+            "name": "涉外法律",
+            "parentCode": "0000",
+            "level": "1",
+            "status": "1",
+            "code": "5000",
+            "createAt": {
+                "date": "2019-05-04 20:23:11.000000",
+                "timezone_type": 3,
+                "timezone": "PRC"
+            },
+            "updateAt": {
+                "date": "2019-05-04 20:23:12.000000",
+                "timezone_type": 3,
+                "timezone": "PRC"
+            }
+        },
+        {
+            "id": 77,
+            "name": "知识产权",
+            "parentCode": "0000",
+            "level": "1",
+            "status": "1",
+            "code": "6000",
+            "createAt": {
+                "date": "2019-05-04 20:23:11.000000",
+                "timezone_type": 3,
+                "timezone": "PRC"
+            },
+            "updateAt": {
+                "date": "2019-05-04 20:23:12.000000",
+                "timezone_type": 3,
+                "timezone": "PRC"
+            }
+        },
+        {
+            "id": 78,
+            "name": "其它综合",
+            "parentCode": "0000",
+            "level": "1",
+            "status": "1",
+            "code": "7000",
+            "createAt": {
+                "date": "2019-05-04 20:23:11.000000",
+                "timezone_type": 3,
+                "timezone": "PRC"
+            },
+            "updateAt": {
+                "date": "2019-05-04 20:23:12.000000",
+                "timezone_type": 3,
+                "timezone": "PRC"
+            }
+        }
+    ],
+    "service": [
+        {
+            "id": 1,
+            "text": "协助人民调解"
+        },
+        {
+            "id": 2,
+            "text": "开展法律援助"
+        },
+        {
+            "id": 3,
+            "text": "参与化解涉法涉诉信访案件"
+        },
+        {
+            "id": 4,
+            "text": "开展普法宣传"
+        }
+    ]
+}
+
+3.咨询信息录入：
+地址：/api/consult/insert
+请求类型：post
+参数：token
+	consult_number 咨询编号
+	consult_name  咨询人姓名
+	consult_identity 身份 
+	consult_age
+	consult_sex
+	consult_phone  联系电话
+	business 业务分类
+	content  咨询事项
+	consult_result 解答结果
+	remark 备注
+	servecontent 服务内容:1协助人民调解,2开展法律援助,3参与化解涉法涉诉信访案件,4开展普法宣传
+	explain 情况说明
+返回：
+	{
+	    "code": 1,
+	    "msg": "录入成功",
+	    "data": 
+	}
+
+4.咨询详情
+地址：/api/consult/show
+请求类型：post
+参数：token
+    id
+返回：
+{
+    "code": 1,
+    "msg": "请求成功",
+    "data": {
+        "id": 1000,
+        "consultNumber": "2019042212204",
+        "business": "9",
+        "content": "2018年发生交通事故，在事故中造成严重受伤，现还在治疗期间，咨询什么时候可以申请伤残鉴定？",
+        "consultName": "杨志",
+        "consultAge": "",
+        "consultSex": 1,
+        "consultIdentity": "99",
+        "consultPhone": "18835599881",
+        "consultResult": "根据申请鉴定的规定，办理出院三个月后可以申请伤残鉴定，现在还在治疗期间，不能申请伤残鉴定，到期后可以到沁源司法鉴定中心或者法院申请伤残鉴定",
+        "serviceId": 1377,
+        "servicePerson": "任尚雯",
+        "instituName": "沁源县公共法律服务中心",
+        "instituId": 121,
+        "organizationName": "沁源县司法局",
+        "organizationId": 121,
+        "satisfaction": 1,
+        "status": 2,
+        "remarks": "",
+        "auditId": 276,
+        "audit": "刘炎峰",
+        "opinion": "",
+        "day": "-8",
+        "city": "140400",
+        "area": "140431",
+        "serviceContent": "",
+        "showHow": "",
+        "pathInt": null,
+        "spot": null,
+        "spotTime": null,
+        "spotType": null,
+        "spotCase": null,
+        "spotOpinion": null,
+        "date": "20190422",
+        "spotStatus": 1,
+        "subType": 1,
+        "qr": "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQEy8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAybkx6Tk5RSXNkV2sxRVNPWnhzYzMAAgQWlr1cAwQgHAAA",
+        "uuid": "64d9a31f9bfb5069a1369a6320f5160d",
+        "dutyCity": null,
+        "dutyArea": null,
+        "createAt": {
+            "date": "2019-04-22 18:23:50.000000",
+            "timezone_type": 3,
+            "timezone": "PRC"
+        },
+        "updateAt": {
+            "date": "2019-05-08 17:11:45.000000",
+            "timezone_type": 3,
+            "timezone": "PRC"
+        }
+    }
+}
+
+4.咨询图片上传
+地址：/api/consult/uploads
+请求类型：post
+参数：path
+返回：
+    {
+        "code": 1,
+        "msg": "上传成功",
+        "data": "uploads/image/4b168cd3204e0b85a3652cd430a4a96e.png"
+    }
+5.咨询评价：
+地址：/api/consult/evaluation
+请求类型：post
+参数：
+    token
+    id int 
+    evaluation 评价（int）1:满意 2:基本满意 3:不满意
+    path 图片路径
+返回：
+    {
+        "code": 1,
+        "msg": "评价成功"
+    }
+
+/************************** 异常上报4个接口 *****************************/
+
+1.值班异常上报列表
+地址：/api/abnormal/index
+请求类型：post
+参数：token
+返回：
+    {
+        "code": 1,
+        'msg'=>'获取成功',
+        'state'=>1 //为1的时候有异常上报按钮，2的时候没有
+        "data": [
+            {
+                "id": 385,
+                "number": "2019050233220120012",  //异常编号
+                "reportId": 3322,
+                "reportName": "xx",
+                "category": 2,  //异常类别 1电脑 2 手机 3其他
+                "date": "20190516",
+                "description": "22",  //描述
+                "instituName": "西温庄乡公共法律服务工作站",
+                "instituId": 240,
+                "city": "140100",
+                "area": "140105",
+                "auditId": null,
+                "audit": null,
+                "opinion": null,
+                "status": 1,    1待审核2:审核通过3:审核不通过
+                "errorStatus": 1,  //
+                "day": null,
+                "smsState": 0,
+                "dutyCity": null,
+                "dutyArea": null,
+                "createAt": {
+                    "date": "2019-05-16 20:11:51.000000",
+                    "timezone_type": 3,
+                    "timezone": "PRC"
+                },
+                "updateAt": {
+                    "date": "2019-05-16 20:11:51.000000",
+                    "timezone_type": 3,
+                    "timezone": "PRC"
+                }
+            }
+        ]
+    }
+备注：data为空‘’，暂无信息
+
+2.异常上报展示：
+地址：/api/abnormal/show
+请求类型：post
+参数：token
+返回：
+    {
+        "code": 1,
+        "state": 1,  //可以异常上报
+        "data": {
+            "work_number": "2019051603322170404", //编号
+            "true_name": "赵小天" 
+        }
+    }
+    {
+        "code": 1,
+        "state": 2,  //暂无信息
+        "msg": {
+            暂无信息
+        }
+    }
+
+3.新增异常上报：
+地址：/api/abnormal/insert
+请求类型：post
+参数：token
+    number  编号
+    report_name 上报人
+    category    类别
+    errorStatus 异常状态
+    description 详细描述
+返回：
+    {
+        "code": 1,
+        "state": 1,  //可以异常上报
+        "data": {
+            "work_number": "2019051603322170404", //编号
+            "true_name": "赵小天" 
+        }
+    }
+    {
+        "code": 1,
+        "state": 2,  //暂无信息
+        "msg": {
+            暂无信息
+        }
+    }
+
+4.异常上报详情
+地址：/api/abnormal/abnormalshow
+请求类型：post
+参数：id
+返回：
+    {
+        "code": 1,
+        "data": {
+            "id": 385,
+            "number": "2019050233220120012",
+            "reportId": 3322,
+            "reportName": "xx",
+            "category": 2,
+            "date": "20190516",
+            "description": "22",
+            "instituName": "西温庄乡公共法律服务工作站",
+            "instituId": 240,
+            "city": "140100",
+            "area": "140105",
+            "auditId": null,
+            "audit": null,
+            "opinion": null,
+            "status": 1,
+            "errorStatus": 1,
+            "day": null,
+            "smsState": 0,
+            "dutyCity": null,
+            "dutyArea": null,
+            "createAt": {
+                "date": "2019-05-16 20:11:51.000000",
+                "timezone_type": 3,
+                "timezone": "PRC"
+            },
+            "updateAt": {
+                "date": "2019-05-16 20:11:51.000000",
+                "timezone_type": 3,
+                "timezone": "PRC"
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

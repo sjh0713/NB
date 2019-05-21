@@ -33,12 +33,7 @@ mysql -h localhost -u root -p law < database.sql
 update table_name set column = value[, colunm = value...] [where condition];
 
 mysql查询数据为空和不为空的时候：
-select * from table where column is null;
-
-
-
-
-
+	select * from table where column is null;
 
 
 ## Mac数据库报错的解决方法：
@@ -56,4 +51,15 @@ select * from table where column is null;
 	sudo /usr/local/mysql/support-files/mysql.server restart
 
 
+数据库导出字段和注释：
+	SELECT	
+		COLUMN_NAME 字段,	
+		COLUMN_COMMENT 名称,	
+		COLUMN_TYPE 类型,
+		IF (	IS_NULLABLE = 'YES',	'是',	'否') 是否为空, 
+		COLUMN_COMMENT 注释
+	FROM	
+		INFORMATION_SCHEMA. COLUMNS
+	WHERE	
+		table_schema = '数据库'AND table_name = '表名';
 

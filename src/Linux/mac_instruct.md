@@ -1,4 +1,5 @@
 设置硬链接：
+
 	ln -s 要链接的路径 原来的路径
 
 Mac常用命令：
@@ -28,11 +29,14 @@ Mac常用命令：
 	在访达中输入路径：command+shift+Gs
 
 当前和root用户的切换：
-当前用户到root：sudo su
-root到当前用户：su - myl
 
-
+    当前用户到root：sudo su
+    root到当前用户：su - myl
 目录： /usr/local/Cellar用来存放brew安装的
+
+本地通过ssh连接服务器：
+    
+    ssh username@39.105.78.71
 
 
 

@@ -1,0 +1,211 @@
+{% extends 'base.html.twig' %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/counseling_serving.css?v=1025'|theme) }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/print.css?v=1025'|theme) }}" />
+{% endblock %}
+{% block body %}
+    <div class="admin bg-admin">
+    <!--内容-->
+		<form action="" method="post" class="form_tj">
+			<div class="content">
+
+				<div class="right_box">
+					<div class="return_box">
+						<div class="retuen" onclick="javaScript:history.go(-1)"><a href="javascript:void(0)">返回</a></div>
+					</div>
+					<div class="consultation_box">
+						<div class="center_box" id="printArea">
+							<div class="center_title">咨询服务表</div>
+							<div class="basic_box">
+								<div style="width: 40%">值班单位:{{ consult.instituName }}</div>
+								<div class="text_center" style="width: 20%">服务人:{{ consult.servicePerson }}</div>
+								<div class="text_right" style="width: 40%">日期:{{ consult.createAt|date('Y-m-d H:i:s') }}</div>
+							</div>
+							<table class="service_table">
+								<colgroup width="18%"></colgroup>
+								<colgroup width="32%"></colgroup>
+								<colgroup width="18%"></colgroup>
+								<colgroup width="32%"></colgroup>
+								<tr>
+									<td class="bg_title">咨询编码:</td>
+									<td>{{ consult.consultNumber }}</td>
+									<td class="bg_title">服务对象名称:</td>
+									<td>{{ consult.consultName|default('-') }}</td>
+								</tr>
+								<tr>
+									<td class="bg_title">身份:</td>
+									<td>{{ code_name(consult.consultIdentity,62) }}</td>
+									<td class="bg_title">年龄：</td>
+									<td>{{ consult.consultAge }}</td>
+								</tr>
+								<tr>
+									<td class="bg_title">联系电话：</td>
+									<td>{{ consult.consultPhone }}</td>
+									<td class="bg_title">性别：</td>
+									<td>{{ consult.consultSex|replace({'1':'男','2':'女'}) }}</td>
+								</tr>
+								<tr>
+									<td class="bg_title">业务分类：</td>
+									<td colspan="3">{{ code_name(consult.business,63) }}</td>
+								</tr>
+								<tr class="height_170">
+									<td class="bg_title">咨询事项：</td>
+									<td colspan="3">
+										{{ consult.content|raw }}
+									</td>
+								</tr>
+								<tr class="height_170">
+									<td class="bg_title">解答结果：</td>
+									<td colspan="3">
+										{{ consult.consultResult|raw }}
+									</td>
+								</tr>
+								<tr>
+									<td class="bg_title">备注：</td>
+									<td colspan="3">{{ consult.remarks|default('无') }}</td>
+								</tr>
+								<tr class="height_100">
+									<td class="bg_title">服务内容：</td>
+									<td colspan="3" >{{ consult.serviceContent|replace({'1':'协助人民调解','2':'开展法律援助','3':'参与化解涉法涉诉信访案件','4':'开展普法宣传'}) }}</td>
+								</tr>
+								<tr class="height_100">
+									<td class="bg_title">情况说明：</td>
+									<td colspan="3" >{{ consult.showHow }}</td>
+								</tr>
+								<tr class="height_100">
+									<td class="bg_title">满意度评价：</td>
+									<td colspan="3" class="satisfied_text">{{ consult.satisfaction|replace({'0':'待评价','1':'满意','2':'基本满意','3':'不满意','4':'超期审核'})}}</td>
+								</tr>
+							</table>
+						</div>
+						<div class="center_box">
+                            {% if statistical!=1 %}
+								<table class="service_table border-color-blue">
+									<colgroup width="18%"></colgroup>
+									<colgroup width="32%"></colgroup>
+									<colgroup width="18%"></colgroup>
+									<colgroup width="32%"></colgroup>
+									<tr>
+										<td class="bg_title record_bg"><span>审核意见:</span></td>
+										<td colspan="3">
+											<label>
+												<span class="record">是否记录清晰、内容完整</span>
+											</label>
+                                            {% if consult.status==1 %}
+												<label >
+													<input type="radio" name="status" class="radio" value="2" checked  />是
+												</label>
+												<label >
+													<input type="radio" name="status" class="radio" value="3" />否
+												</label>
+                                            {% else %}
+												<label >{{ consult.status|replace({'2':'是','3':'否'}) }}</label>
+                                            {% endif %}
+										</td>
+									</tr>
+                                    {% if consult.status==1 %}
+										<tr style="display: none;" class="status">
+											<td class="bg_title record_bg"><span>审核理由:</span></td>
+											<td colspan="3">
+												<textarea name="opinion" id="opinion" rows="" cols="" placeholder="请填写"></textarea>
+											</td>
+										</tr>
+                                    {% elseif consult.status==3%}
+										<tr  class="status">
+											<td class="bg_title record_bg"><span>审核理由:</span></td>
+											<td colspan="3">{{ consult.opinion }}</td>
+										</tr>
+                                    {% endif %}
+								</table>
+                            {% else %}
+                                {% if consult.status!=1 %}
+									<table class="service_table border-color-blue">
+										<colgroup width="18%"></colgroup>
+										<colgroup width="32%"></colgroup>
+										<colgroup width="18%"></colgroup>
+										<colgroup width="32%"></colgroup>
+										<tr>
+											<td class="bg_title record_bg"><span>审核意见:</span></td>
+											<td colspan="3">
+												<label>
+													<span class="record">是否记录清晰、内容完整</span>
+												</label>
+												<label >{{ consult.status|replace({'2':'是','3':'否'}) }}</label>
+											</td>
+										</tr>
+										<tr  class="status">
+											<td class="bg_title record_bg"><span>审核理由:</span></td>
+											<td colspan="3">{{ consult.opinion }}</td>
+										</tr>
+									</table>
+                                {% endif %}
+                            {% endif %}
+						</div>
+
+						<div style="width: 75%;text-align: center;margin: 0 auto;">
+							{% if consult.status==1 %}
+								<input type="submit" class="spot_checks" name="submit" value="提交" style="display: inline-block;"/>
+							{% endif %}
+							<button class="bg-01 export spot_checks" id="btnPrint" style="display: inline-block;">
+								<span style="cursor: pointer;"><img src="{{ asset(theme('img/dy.png')) }}" alt="" /></span> 打印
+							</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</form>
+	<!--/内容-->
+    </div>
+{% endblock %}
+{% block js %}
+    <script src="{{ asset('public/pintuer2/js/zhree/js/jquery-1.10.2.min.js') }}" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ asset('public/pintuer2/js/zhree/js/jquery.ztree.all.js') }}" type="text/javascript" charset="utf-8"></script>
+	<script src="{{ asset('public/layer/layer.js') }}"></script>
+	<script type="text/javascript" src="{{ asset(theme('js/jquery.PrintArea.js')) }}"></script>
+	<script type="text/javascript">
+		$("#btnPrint").click(function() {
+			$("#printArea").printArea();
+			return false;
+		});
+	</script>
+	<script>
+
+        // $(".service_table .radio  ").on('click',function(){
+        //     if($(this).val() == '2'){
+        //         $(".status").css('display','none')
+        //     }else{
+        //         $(".status").css('display','table-row')
+        //     }
+        // })
+		// $(".form_tj").on("submit",function(){
+		// 		var opinion=document.getElementById("opinion");
+		// 		if(opinion.value===""){
+		// 			layer.msg("请填写审核理由");
+		// 			return false;
+		// 		}
+		//
+		// })
+		$(".service_table .radio  ").on('click',function(){
+			if($(this).val() == '2'){
+				$(".status").css('display','none')
+			}else{
+				$(".status").css('display','table-row')
+			}
+		})
+		$(".form_tj").on("submit",function(){
+			if($(".service_table .radio:checked").val() == '2'){
+			}else{
+				var opinion=document.getElementById("opinion");
+				if(opinion.value===""){
+					layer.msg("请填写审核理由");
+					return false;
+				}
+			}
+
+		})
+
+	</script>
+
+{% endblock %}
+

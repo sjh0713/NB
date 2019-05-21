@@ -1,8 +1,8 @@
 ## 相关命令文档
 - 定时生成统计相关命令
 
-		php bin/console scheduling:update:consultinglog
-        php bin/console scheduling:update:signlog
+	0 * * * * php /home/wwwroot/law/bin/console scheduling:update:consultinglog
+    0 * * * * php /home/wwwroot/law/bin/console scheduling:update:signlog
         
 - 定时生成排班相关命令（每天的23点执行）
        
@@ -28,3 +28,38 @@
 
     
     */5 * * * * php /home/wwwroot/law/bin/console scheduling:sms:send
+
+- 每天发送第二天的通知
+    0 19 * * * php /home/wwwroot/law/bin/console scheduling:send:daysms
+
+
+
+0 * * * * php /home/wwwroot/law/bin/console scheduling:update:consultinglog
+0 * * * * php /home/wwwroot/law/bin/console scheduling:update:signlog
+0 23 * * 4 php /home/wwwroot/law/bin/console scheduling:info:create
+0 * * * * php /home/wwwroot/law/bin/console scheduling:info:statistics
+0 19 * * * php /home/wwwroot/law/bin/console scheduling:send:daysms
+*/5 * * * * php /home/wwwroot/law/bin/console scheduling:sms:send
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

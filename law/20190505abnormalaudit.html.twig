@@ -1,0 +1,359 @@
+{% extends 'base.html.twig' %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/counseling_serving.css?v=1025'|theme) }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset(theme('css/refer_information.css')) }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/print.css?v=1025'|theme) }}" />
+	<style>
+		.apply_box_ll {
+			margin-bottom: 30px;
+		}
+		.list_box_zixun {
+			border-bottom: 1px solid #CCCCCC;
+		}
+		.table {
+			width: 100%;
+			max-width: 100%;
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+		.list_box_zixun .table tr td {
+			font-size: 16px;
+			vertical-align: middle;
+			color: #494949;
+			/* text-align: center; */
+		}
+		.list_box_zixun .current {
+			color: #546db9;
+			background-color: #f7fdff;
+			/* text-align: center; */
+		}
+	</style>
+{% endblock %}
+{% block body %}
+    <div class="admin bg-admin">
+    <!--内容-->
+		<form action="" method="post" class="form_tj">
+			<div class="content">
+
+				<div class="right_box">
+					<div class="return_box">
+						<div class="retuen" onclick="javaScript:history.go(-1)"><a href="javascript:void(0)">返回</a></div>
+					</div>
+					<div class="consultation_box">
+						<div class="center_box" id="printArea">
+							<div class="center_title">异常上报表</div>
+							<div class="basic_box">
+								<div>值班单位:{{ abnormal.instituName }}</div>
+								<div class="text_right" style="float:right;">日期:{{ abnormal.createAt|date('Y-m-d H:i:s') }}</div>
+							</div>
+							<div class="apply_box_ll">
+								<div class="list_box_zixun">
+									<table class="table table-bordered">
+
+										<tr>
+											<td class="current  wt-160">异常编号：</td>
+											<td class="wt-220 cl-07">{{ abnormal.number }}</td>
+											<td class="current wt-160">上报人：</td>
+											<td class="wt-220 cl-07">{{ abnormal.reportName }}</td>
+										</tr>
+
+
+
+										<tr>
+											<td class="current wt-160">异常类别：</td>
+											<td colspan="3" class="cl-07">{{ abnormal.category|replace({1:'电脑故障',2:'手机故障',3:'其他'}) }}</td>
+										</tr>
+										<tr>
+											<td class="current wt-160">异常上报类型：</td>
+											<td colspan="3" class="cl-07">{{ abnormal.errorStatus|replace({1:'签到异常',2:'签退异常'}) }}</td>
+										</tr>
+										<tr>
+											<td class="current wt-160 ht-140">详情描述：</td>
+											<td colspan="3" class="cl-07">
+													{{ abnormal.description|raw }}
+											</td>
+										</tr>
+
+									</table>
+
+								</div>
+							</div>
+
+							<table class="service_table border-color-blue">
+								<colgroup width="18%"></colgroup>
+								<colgroup width="32%"></colgroup>
+								<colgroup width="18%"></colgroup>
+								<colgroup width="32%"></colgroup>
+                                {% if abnormal.status!=1 %}
+									<tr>
+										<td class="bg_title record_bg"><span>审核结果:</span></td>
+										<td colspan="3">
+                                            <label >
+                                            {{ abnormal.status|replace({'2':'通过','3':'不通过'}) }}
+										</label>
+										</td>
+									</tr>
+									<tr  class="status">
+										<td class="bg_title record_bg"><span>审核意见:</span></td>
+										<td colspan="3">
+                                            {{ abnormal.opinion }}
+										</td>
+									</tr>
+                                {% endif %}
+							</table>
+						</div>
+
+
+						<table class="table table-bordered service_table border-color-blue center_box" style="width: 75%;margin:0 auto;">
+                            {% if abnormal.status==1 %}
+								<tr>
+									<td class="bg_title record_bg"><span>审核结果:</span></td>
+									<td colspan="3">
+										<label >
+											<input type="radio" name="status" class="radio" value="2" checked  />通过
+										</label>
+										<label >
+											<input type="radio" name="status" class="radio" value="3" />不通过
+										</label>
+									</td>
+								</tr>
+								<tr style="" class="status">
+									<td class="bg_title record_bg"><span>审核意见:</span></td>
+
+									<td colspan="3">
+										<textarea class="input" style="margin:3px 0px 0px;" name="opinion" id="opinion" rows="" cols="" placeholder="请填写"></textarea>
+									</td>
+								</tr>
+                            {% endif %}
+
+						</table>
+						<div style="width: 75%;text-align: center;margin: 0 auto;">
+							{% if abnormal.status==1 %}
+								<input type="submit" class="spot_checks" name="submit" value="提交" style="display: inline-block;"/>
+							{% endif %}
+							<button class="export spot_checks" id="btnPrint" style="display: inline-block;">
+								<span style="cursor: pointer;"><img src="{{ asset(theme('img/dy.png')) }}" alt="" /></span> 打印
+							</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</form>
+	<!--/内容-->
+    </div>
+{% endblock %}
+{% block js %}
+    <script src="{{ asset('public/pintuer2/js/zhree/js/jquery-1.10.2.min.js') }}" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ asset('public/pintuer2/js/zhree/js/jquery.ztree.all.js') }}" type="text/javascript" charset="utf-8"></script>
+	<script src="{{ asset('public/layer/layer.js') }}"></script>
+	<script type="text/javascript" src="{{ asset(theme('js/jquery.PrintArea.js')) }}"></script>
+	<script type="text/javascript">
+		$("#btnPrint").click(function() {
+			$("#printArea").printArea();
+			return false;
+		});
+	</script>
+	<script>
+
+        // $(".service_table .radio  ").on('click',function(){
+        //     if($(this).val() == '2'){
+        //         $(".status").css('display','none')
+        //     }else{
+        //         $(".status").css('display','table-row')
+        //     }
+        // })
+		$(".form_tj").on("submit",function(){
+			var opinion=document.getElementById("opinion");
+			if(opinion.value===""){
+				layer.msg("请填写审核意见");
+				return false;
+			}
+
+		})
+
+	</script>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+{% extends 'base.html.twig' %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/counseling_serving.css?v=1025'|theme) }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset(theme('css/refer_information.css')) }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/print.css?v=1025'|theme) }}" />
+	<style>
+		.apply_box_ll {
+			margin-bottom: 30px;
+		}
+		.list_box_zixun {
+			border-bottom: 1px solid #CCCCCC;
+		}
+		.table {
+			width: 100%;
+			max-width: 100%;
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+		.list_box_zixun .table tr td {
+			font-size: 16px;
+			vertical-align: middle;
+			color: #494949;
+			/* text-align: center; */
+		}
+		.list_box_zixun .current {
+			color: #546db9;
+			background-color: #f7fdff;
+			/* text-align: center; */
+		}
+	</style>
+{% endblock %}
+{% block body %}
+    <div class="admin bg-admin">
+    <!--内容-->
+		<form action="" method="post" class="form_tj">
+			<div class="content">
+
+				<div class="right_box">
+					<div class="return_box">
+						<div class="retuen" onclick="javaScript:history.go(-1)"><a href="javascript:void(0)">返回</a></div>
+					</div>
+					<div class="consultation_box">
+						<div class="center_box" id="printArea">
+							<div class="center_title">异常上报表</div>
+							<div class="basic_box">
+								<div>值班单位:{{ abnormal.instituName }}</div>
+								<div class="text_right" style="float:right;">日期:{{ abnormal.createAt|date('Y-m-d H:i:s') }}</div>
+							</div>
+							<div class="apply_box_ll">
+								<div class="list_box_zixun">
+									<table class="table table-bordered">
+
+										<tr>
+											<td class="current  wt-160">异常编号：</td>
+											<td class="wt-220 cl-07">{{ abnormal.number }}</td>
+											<td class="current wt-160">上报人：</td>
+											<td class="wt-220 cl-07">{{ abnormal.reportName }}</td>
+										</tr>
+
+
+
+										<tr>
+											<td class="current wt-160">异常类别：</td>
+											<td colspan="3" class="cl-07">{{ abnormal.category|replace({1:'电脑故障',2:'手机故障',3:'其他'}) }}</td>
+										</tr>
+										<tr>
+											<td class="current wt-160">异常上报类型：</td>
+											<td colspan="3" class="cl-07">{{ abnormal.errorStatus|replace({1:'签到异常',2:'签退异常'}) }}</td>
+										</tr>
+										<tr>
+											<td class="current wt-160 ht-140">详情描述：</td>
+											<td colspan="3" class="cl-07">
+													{{ abnormal.description|raw }}
+											</td>
+										</tr>
+
+									</table>
+
+								</div>
+							</div>
+
+							<table class="service_table border-color-blue">
+								<colgroup width="18%"></colgroup>
+								<colgroup width="32%"></colgroup>
+								<colgroup width="18%"></colgroup>
+								<colgroup width="32%"></colgroup>
+							</table>
+						</div>
+
+
+						<table class="table table-bordered service_table border-color-blue center_box" style="width: 75%;margin:0 auto;">
+							<tr>
+								<td class="bg_title record_bg"><span>审核结果:</span></td>
+								<td colspan="3">
+                                    {% if abnormal.status==1 %}
+										<label >
+											<input type="radio" name="status" class="radio" value="2" checked  />通过
+										</label>
+										<label >
+											<input type="radio" name="status" class="radio" value="3" />不通过
+										</label>
+                                    {% else %}
+										<label >
+                                            {{ abnormal.status|replace({'2':'通过','3':'不通过'}) }}
+										</label>
+                                    {% endif %}
+								</td>
+							</tr>
+							{% if abnormal.status==1 %}
+								<tr style="" class="status">
+									<td class="bg_title record_bg"><span>审核意见:</span></td>
+
+									<td colspan="3">
+										<textarea class="input" style="margin:3px 0px 0px;" name="opinion" id="opinion" rows="" cols="" placeholder="请填写"></textarea>
+									</td>
+								</tr>
+							{% else %}
+								<tr  class="status">
+									<td class="bg_title record_bg"><span>审核意见:</span></td>
+									<td colspan="3">
+										{{ abnormal.opinion }}
+									</td>
+								</tr>
+							{% endif %}
+						</table>
+						<div style="width: 75%;text-align: center;margin: 0 auto;">
+							{% if abnormal.status==1 %}
+								<input type="submit" class="spot_checks" name="submit" value="提交" style="display: inline-block;"/>
+							{% endif %}
+							<button class="export spot_checks" id="btnPrint" style="display: inline-block;">
+								<span style="cursor: pointer;"><img src="{{ asset(theme('img/dy.png')) }}" alt="" /></span> 打印
+							</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</form>
+	<!--/内容-->
+    </div>
+{% endblock %}
+{% block js %}
+    <script src="{{ asset('public/pintuer2/js/zhree/js/jquery-1.10.2.min.js') }}" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ asset('public/pintuer2/js/zhree/js/jquery.ztree.all.js') }}" type="text/javascript" charset="utf-8"></script>
+	<script src="{{ asset('public/layer/layer.js') }}"></script>
+	<script type="text/javascript" src="{{ asset(theme('js/jquery.PrintArea.js')) }}"></script>
+	<script type="text/javascript">
+		$("#btnPrint").click(function() {
+			$("#printArea").printArea();
+			return false;
+		});
+	</script>
+	<script>
+
+        // $(".service_table .radio  ").on('click',function(){
+        //     if($(this).val() == '2'){
+        //         $(".status").css('display','none')
+        //     }else{
+        //         $(".status").css('display','table-row')
+        //     }
+        // })
+		$(".form_tj").on("submit",function(){
+			var opinion=document.getElementById("opinion");
+			if(opinion.value===""){
+				layer.msg("请填写审核意见");
+				return false;
+			}
+
+		})
+
+	</script>
+
+{% endblock %}
+
