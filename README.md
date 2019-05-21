@@ -6,7 +6,7 @@
 		- [Basic](./src/symfony/Basic/symfony.md) 基础知识点
 		- [Shortcuts Methods](./src/symfony/controller.md) 控制器中的快捷方法
 		- [command](./src/symfony/command.md) 命令
-		- [Guzzle](./src/symfony/symfony.md) 请求接口
+		- [Guzzle](src/symfony/Basic/symfony.md) 请求接口
 		- [SQL](./src/symfony/SQL.md) 数据库操作
 
 

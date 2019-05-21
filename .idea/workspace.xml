@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b57dd7a4-bee5-4c0e-b15a-bb1392bf886e" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Linux/Linux.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PHP/php_function.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/question/question.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/symfony/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/daily.md" beforeDir="false" afterPath="$PROJECT_DIR$/law/daily.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/law_crontab.md" beforeDir="false" afterPath="$PROJECT_DIR$/law/law_crontab.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PHP/PHP.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/PHP/PHP.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/diary/day.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/diary/day.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mac/mac_instruct.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Linux/mac_instruct.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mysql/mysql.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/mysql/mysql.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/phpstorm/phpstorm.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/phpstorm/phpstorm.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/nginx_config/servers/kit.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/nginx_config/servers/kit.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/symfony/symfony.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/symfony/Basic/symfony.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,9 +37,43 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="461561017">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Markdown" value="3" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/symfony/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/symfony/Basic/symfony.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-338" />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -79,35 +105,43 @@
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="797" />
+    <option name="height" value="803" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="cheat sheets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cheat sheets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="law" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="cheat sheets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cheat sheets" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cheat sheets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cheat sheets" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="symfony" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cheat sheets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cheat sheets" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="Basic" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -145,6 +179,7 @@
       <workItem from="1555589262423" duration="1166000" />
       <workItem from="1555653329004" duration="1762000" />
       <workItem from="1557845785055" duration="7000" />
+      <workItem from="1558406209331" duration="226000" />
     </task>
     <task id="LOCAL-00001" summary="note">
       <created>1555120384585</created>
@@ -160,16 +195,24 @@
       <option name="project" value="LOCAL" />
       <updated>1555152261666</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="note">
+      <created>1558406244301</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1558406244301</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23670000" />
+    <option name="totallyTimeSpent" value="23896000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.20391873" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.04644412" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -328,6 +371,30 @@
           <first_editor relative-caret-position="312">
             <caret line="63" selection-start-line="63" selection-end-line="65" selection-end-column="27" />
           </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/symfony/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/symfony/Basic/symfony.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-338" />
           <second_editor />
         </state>
       </provider>
