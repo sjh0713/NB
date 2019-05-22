@@ -17,37 +17,28 @@
 		- [Guzzle](src/symfony/Basic/symfony.md) 请求接口
 		- [SQL](./src/symfony/SQL.md) 数据库操作
 
-
-
-
 2.  [PHP](src/PHP/README.md "PHP")
-    - [Basic](src/PHP/README.md) 基础和常用
-        - [PHP](./src/PHP/PHP.md) PHP相关函数
-        - [Try catch](./src/PHP/try_catch.md) PHP异常
+    - [PHP](./src/PHP/PHP.md) PHP相关函数
+    - [Try catch](./src/PHP/try_catch.md) PHP异常
 
-3   [GIT](src/git/README.md "PHP")
-    - [Basic](src/git/README.md) 基础和常用
-	    - [crlf](./src/git/git crlf.md) crlf报错解决
-	    - [代码提交](./src/git/git_base.md) git代码提交
+3.  [GIT](src/git/README.md "PHP")
+     - [Basic](src/git/README.md) 基础和常用
+	 - [crlf](./src/git/git crlf.md) crlf报错解决
+	 - [代码提交](./src/git/git_base.md) git代码提交
 
-4 [Linux](src/Linux/README.md "Linux")
-
+4.  [Linux](src/Linux/README.md "Linux")
 	- [macdown](./src/Markdown-Syntax-CN-master/syntax.md) Macdown相关
 	- [mac快捷键](src/Linux/mac_instruct.md) 快捷键
 	- [LNMP](./src/service/mac_install_apache_php.md) 快捷键
 	- [LAMP](./src/service/mac_install_nginx_php.md) 快捷键
 
-
-5 [MYSQL](src/Linux/README.md "MYSQL")	
-
+5.  [MYSQL](src/Linux/README.md "MYSQL")	
 	- [mysql](./src/mysql/mysql.md) 数据库操作
 
-6 [phpstorm](src/Linux/README.md "phpstorm")
+6.  [phpstorm](src/Linux/README.md "phpstorm")
+    - [phpstorm](./src/phpstrom/phpstorm.md) 快捷键
 
-	- [phpstorm](./src/phpstrom/phpstorm.md) 快捷键
-
-7 [document](src/Linux/README.md "document")
-
+7.  [document](src/Linux/README.md "document")
 	- [文档链接](./src/studyUrl.md) 文档相关链接
 
 
