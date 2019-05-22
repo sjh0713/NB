@@ -20,36 +20,29 @@
 
 
 
-- ### PHP
+2 [PHP](src/PHP/README.md "PHP")
+	- [PHP](./src/PHP/PHP.md) PHP相关函数
+	- [Try catch](./src/PHP/try_catch.md) PHP异常
 
-	1. [PHP](./src/PHP/PHP.md) PHP相关函数
-	2. [Try catch](./src/PHP/try_catch.md) PHP异常
+3 [GIT](src/git/README.md "PHP")
+	- [crlf](./src/git/git crlf.md) crlf报错解决
+	- [代码提交](./src/git/git_base.md) git代码提交
 
-- ### GIT
+4 [Linux](src/Linux/README.md "Linux")
+	- [macdown](./src/Markdown-Syntax-CN-master/syntax.md) Macdown相关
+	- [mac快捷键](src/Linux/mac_instruct.md) 快捷键
+	- [LNMP](./src/service/mac_install_apache_php.md) 快捷键
+	- [LAMP](./src/service/mac_install_nginx_php.md) 快捷键
 
-	1. [crlf](./src/git/git crlf.md) crlf报错解决
-	2. [代码提交](./src/git/git_base.md) git代码提交
 
-- ### MAC相关操作
+5 [MYSQL](src/Linux/README.md "MYSQL")	
+	- [mysql](./src/mysql/mysql.md) 数据库操作
 
-	1. [macdown](./src/Markdown-Syntax-CN-master/syntax.md) Macdown相关
-	2. [mac快捷键](src/Linux/mac_instruct.md) 快捷键
+6 [phpstorm](src/Linux/README.md "phpstorm")
+	- [phpstorm](./src/phpstrom/phpstorm.md) 快捷键
 
-- ### MYSQL
-
-	1. [mysql](./src/mysql/mysql.md) 数据库操作
-
-- ### phpstorm
-
-	1. [phpstorm](./src/phpstrom/phpstorm.md) 快捷键
-
-- ### 服务器
-
-	1. [LNMP](./src/service/mac_install_apache_php.md) 快捷键
-	2. [LAMP](./src/service/mac_install_nginx_php.md) 快捷键
-
-- ### 文档链接
-	1. [文档链接](./src/studyUrl.md) 文档相关链接
+7 [document](src/Linux/README.md "document")
+	- [文档链接](./src/studyUrl.md) 文档相关链接
 
 
 
