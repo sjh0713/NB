@@ -11,7 +11,6 @@
         - [Twig Extension](./src/symfony/Twig/extension.md) Twig扩展示例
     
     - [Doctrine](src/symfony/Doctrine/README.md) Doctrine相关
-    	- [Shortcuts Methods](./src/symfony/controller.md) 控制器中的快捷方法
         - [QueryBuilder examples](./src/symfony/Doctrine/query.md) 查询构造器示例
 		- [Shortcuts Methods](./src/symfony/controller.md) 控制器中的快捷方法
 		- [command](./src/symfony/command.md) 命令
