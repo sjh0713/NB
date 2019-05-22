@@ -4,6 +4,18 @@
 1.  [symfony](src/symfony/README.md "symfony") 
 	- [Basic](src/symfony/Basic/README.md) 基础和常用
 		- [Basic](./src/symfony/Basic/symfony.md) 基础知识点
+        - [Shortcuts Methods](./src/symfony/Basic/shortcuts.md) 控制器中的快捷方法
+   
+   	- [Twig](src/symfony/Basic/README.md) Twig相关
+   		- [Twig](./src/symfony/Twig/twig.md) Twig基础
+        - [Twig Extension](./src/symfony/Twig/extension.md) Twig扩展示例
+    
+    - [Doctrine](src/symfony/Doctrine/README.md) Doctrine相关
+        - [QueryBuilder examples](./src/symfony/Doctrine/query build.md) 查询构造器示例
+
+
+	
+		
 		- [Shortcuts Methods](./src/symfony/controller.md) 控制器中的快捷方法
 		- [command](./src/symfony/command.md) 命令
 		- [Guzzle](src/symfony/Basic/symfony.md) 请求接口
