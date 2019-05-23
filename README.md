@@ -13,7 +13,7 @@
     - [Doctrine](src/symfony/Doctrine/README.md) Doctrine相关
         - [Doctrine](./src/symfony/Doctrine/base.md) Doctrine基础知识
         - [QueryBuilder examples](./src/symfony/Doctrine/query.md) 查询构造器示例
-        
+        - [Doctrine Type](./src/symfony/Doctrine/field.md) Doctrine字段类型
         
 		
 
