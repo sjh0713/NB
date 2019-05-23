@@ -14,6 +14,7 @@
         - [Doctrine](./src/symfony/Doctrine/base.md) Doctrine基础知识
         - [QueryBuilder examples](./src/symfony/Doctrine/query.md) 查询构造器示例
         - [Doctrine Type](./src/symfony/Doctrine/field.md) Doctrine字段类型
+        - [An Entity Demo](./src/symfony/Doctrine/demo.md) 一个略复杂的Entity的示例
         
 		
 
@@ -41,6 +42,11 @@
 7.  [document](src/Linux/README.md "document")
 	- [文档链接](./src/studyUrl.md) 文档相关链接
 
+8.  [GO](src/Go/README.md "document")
+    - [Basic](src/symfony/Basic/basic.md) 基础和常用
+        - [Basic](src/symfony/Basic/basic.md) 基础知识
+        - [Data type](src/symfony/Basic/data_type.md) 数据类型
+    - [Beego](src/Go/README.md "document")
 
 - [Shortcuts Methods](./src/symfony/controller.md) 控制器中的快捷方法
 - [command](./src/symfony/command.md) 命令

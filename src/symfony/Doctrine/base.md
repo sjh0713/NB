@@ -17,7 +17,7 @@
         $em->flush(); //Persist objects that did not make up an entire batch
         $em->clear();
 
-- Doctrine生命周期
+- Doctrine生命周期(用来设置时间)
 
         use Doctrine\ORM\Mapping as ORM;
         // Entity类前面
