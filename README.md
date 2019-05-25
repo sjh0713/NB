@@ -43,12 +43,13 @@
 	- [文档链接](./src/studyUrl.md) 文档相关链接
 
 8.  [GO](src/Go/README.md "document")
-    - [Basic](src/symfony/Basic/basic.md) 基础和常用
-        - [Basic](src/symfony/Basic/basic.md) 基础知识
-        - [Data type](src/symfony/Basic/data_type.md) 数据类型
-    - [Go](src/Go/Movie/README.md "document")韩顺平整套视频课程笔记
+    - [Basic](src/Go/Basic/basic.md) 《Go语言编程入门与实战技巧》
+        - [Basic](src/Go/Basic/basic.md) 基础知识
+        - [Data type](src/Go/Basic/data_type.md) 数据类型
+    - [Movice](src/Go/Movie/README.md "document")韩顺平整套视频课程笔记
         - [Basic](src/Go/Movie/base.md) 基础知识
-        
+    - [Beego](src/Go/Beego/README.md "document")Beego框架
+            - [Basic](src/Go/Beego/base.md) 基础知识    
         
 - [Shortcuts Methods](./src/symfony/controller.md) 控制器中的快捷方法
 - [command](./src/symfony/command.md) 命令
