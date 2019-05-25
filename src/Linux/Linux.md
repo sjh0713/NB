@@ -23,3 +23,4 @@ linux和本地之间文件传输：
 	https://blog.51cto.com/oldboy/588592
 	上传：[root@oldboy ~]# rz
 	下载：sz oldboy.txt
+

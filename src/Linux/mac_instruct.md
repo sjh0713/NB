@@ -39,7 +39,9 @@ Mac常用命令：
     ssh username@39.105.78.71
 
 
-
+- 常用Mac操作
+    - command+shift+G 文件路径进入
+    - control+command+R 录屏截屏
 
 
 

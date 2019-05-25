@@ -46,8 +46,10 @@
     - [Basic](src/symfony/Basic/basic.md) 基础和常用
         - [Basic](src/symfony/Basic/basic.md) 基础知识
         - [Data type](src/symfony/Basic/data_type.md) 数据类型
-    - [Beego](src/Go/README.md "document")
-
+    - [Go](src/Go/Movie/README.md "document")韩顺平整套视频课程笔记
+        - [Basic](src/Go/Movie/base.md) 基础知识
+        
+        
 - [Shortcuts Methods](./src/symfony/controller.md) 控制器中的快捷方法
 - [command](./src/symfony/command.md) 命令
 - [Guzzle](src/symfony/Basic/symfony.md) 请求接口
