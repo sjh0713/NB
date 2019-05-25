@@ -49,7 +49,7 @@
     - [Movice](src/Go/Movie/README.md "document")韩顺平整套视频课程笔记
         - [Basic](src/Go/Movie/base.md) 基础知识
     - [Beego](src/Go/Beego/README.md "document")Beego框架
-            - [Basic](src/Go/Beego/base.md) 基础知识    
+        - [Basic](src/Go/Beego/base.md) 基础知识    
         
 - [Shortcuts Methods](./src/symfony/controller.md) 控制器中的快捷方法
 - [command](./src/symfony/command.md) 命令
