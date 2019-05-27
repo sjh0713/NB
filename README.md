@@ -15,7 +15,15 @@
         - [QueryBuilder examples](./src/symfony/Doctrine/query.md) 查询构造器示例
         - [Doctrine Type](./src/symfony/Doctrine/field.md) Doctrine字段类型
         - [An Entity Demo](./src/symfony/Doctrine/demo.md) 一个略复杂的Entity的示例
+   	- [Router](src/symfony/Route/base.md) 路由相关
+        - [Twig Extension](./src/symfony/Twig/extension.md) Twig扩展示例
+    - [Command](src/symfony/Command/console.md) 命令相关
+        - [Console Command](./src/symfony/Command/console.md) 常用的console命令
+        - [Command call Command](./src/symfony/Command/command.md) command之间调用
+        - [Command in Controller](./src/symfony/Command/controller.md) 控制器中调用command
+        - [Custom Command](./src/symfony/Command/custom.md) 自定义Command
         
+                    
 		
 
 2.  [PHP](src/PHP/README.md "PHP")
@@ -50,6 +58,8 @@
         - [Basic](src/Go/Movie/base.md) 基础知识
     - [Beego](src/Go/Beego/README.md "document")Beego框架
         - [Basic](src/Go/Beego/base.md) 基础知识    
+      
+      
         
 - [Shortcuts Methods](./src/symfony/controller.md) 控制器中的快捷方法
 - [command](./src/symfony/command.md) 命令
