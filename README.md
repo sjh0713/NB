@@ -54,8 +54,10 @@
     - [Basic](src/Go/Basic/basic.md) 《Go语言编程入门与实战技巧》
         - [Basic](src/Go/Basic/basic.md) 基础知识
         - [Data type](src/Go/Basic/data_type.md) 数据类型
-    - [Movice](src/Go/Movie/README.md "document")韩顺平整套视频课程笔记
+    - [Movice](src/Go/Movie/base.md "document") 韩顺平整套视频课程笔记
         - [Basic](src/Go/Movie/base.md) 基础知识
+        - [Go Compile](src/Go/Movie/compile.md) GO编译运行
+        - [Go Escaped](src/Go/Movie/escaped.md) 转义字符、注释、代码格式化 
     - [Beego](src/Go/Beego/README.md "document")Beego框架
         - [Basic](src/Go/Beego/base.md) 基础知识    
       
