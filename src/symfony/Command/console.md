@@ -32,3 +32,11 @@
 - 更新列表
       
       php bin/console doctrine:fixture:load --append
+
+- 创建数据库和数据表（生成entity和Repository）
+    
+      php bin/console doctrine:generate:entity  SchedulingBundle:Tablename
+
+- 更新enity中的set和get
+      
+      php bin/console doctrine:generate:entities SchedulingBundle

@@ -35,3 +35,10 @@ Go程序开发注意事项：
     4.每个语句后面不需要加分号
     5.go是一行行进行编译的，不要把多条语句写入一行
     6.定义的变量或者import的包，必须使用，不使用就会报错 
+
+Golang官方标准API文档
+
+    https://golang.google.cn/
+    中文文档：https://studygolong.com/pkgdoc 
+
+
