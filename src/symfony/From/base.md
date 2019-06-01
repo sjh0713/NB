@@ -7,3 +7,4 @@
 生成form和控制器的crud
 
     php bin/console kit:doctrine:generate:crud
+

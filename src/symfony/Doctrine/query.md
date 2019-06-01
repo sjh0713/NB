@@ -2,6 +2,7 @@
 
 >Doctrine 关于Query Builder的文档 https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/reference/query-builder.html
 
+## Repository
 - order by multiple(多个字段排序)
     
         $qb->add('orderBy','first_name ASC, last_name ASC')
@@ -199,3 +200,11 @@
                 ])
                 ->getQuery()->getResult();
         }
+
+## Controller
+
+- delete
+
+        $item = $groupUserRepo->findOneBy(['code'=>$val]);
+        $em->remove($item);
+        $em->flush();
