@@ -74,7 +74,7 @@
     - [phpstorm](./src/phpstrom/phpstorm.md) 快捷键
 
 7.  [document](src/Linux/README.md "document")
-	- [文档链接](./src/studyUrl.md) 文档相关链接
+	- [document](./src/studyUrl.md) 文档相关链接
 
 8.  [GO](src/Go/README.md "document")
     - [Basic](src/Go/Basic/basic.md) 《Go语言编程入门与实战技巧》
