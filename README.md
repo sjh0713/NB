@@ -1,7 +1,6 @@
 # <img src="https://github.githubassets.com/images/icons/emoji/unicode/1f418.png" style="width:30px">  cheat sheets :memo:
 
-###精疲力尽后的微笑我最喜欢，生活从来都是强者的蛋糕，能者的沙发，弱者的沼泽。你睁开眼睛看看到处都是无力的挣扎，别慌也别怕，只要你不
-放弃，只要你不放弃，这生活，就永远充满希望
+<span style="color:red">精疲力尽后的微笑我最喜欢，生活从来都是强者的蛋糕，能者的沙发，弱者的沼泽。你睁开眼睛看看到处都是无力的挣扎，别慌也别怕，只要你不放弃，只要你不放弃，这生活，就永远充满希望</span>
 
 1.  [symfony](src/symfony/Config/README.md "symfony") 
 	- [Basic](src/symfony/Basic/README.md) 基础和常用
