@@ -74,3 +74,9 @@
 4. 二维数组以某个字段转一维数组
     
         array_column($groups_user,'code')
+
+5. PHP二维数组以某个字段进行排序
+
+        $arr 为要排序的数组
+        $last_names = array_column($arr,'field');
+        array_multisort($last_names,'SORT_DESC',$arr);

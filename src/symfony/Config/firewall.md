@@ -25,7 +25,3 @@ access_control 要求用户登录才能访问此URL
         handlers: [rbac.logout_handler]
         path: auth_login_logout		//退出登陆执行的路由
         target: auth_login_index	//退出登陆跳转的页面
-
-
-
-控制器中路由的跳转：$this->redirectToRoute('admin_homepage');

@@ -17,8 +17,7 @@
 	scp -r /home/myfile/ root@192.168.1.100:/data/
 
 
-linux和本地之间文件传输：
-
+5.linux和本地之间文件传输：
 
 	https://blog.51cto.com/oldboy/588592
 	上传：[root@oldboy ~]# rz
