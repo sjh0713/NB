@@ -1,5 +1,7 @@
-# <img src="https://github.githubassets.com/images/icons/emoji/unicode/1f418.png" style="width:50px">  cheat sheets :memo:
+# <img src="https://github.githubassets.com/images/icons/emoji/unicode/1f418.png" style="width:30px">  cheat sheets :memo:
 
+###精疲力尽后的微笑我最喜欢，生活从来都是强者的蛋糕，能者的沙发，弱者的沼泽。你睁开眼睛看看到处都是无力的挣扎，别慌也别怕，只要你不
+放弃，只要你不放弃，这生活，就永远充满希望
 
 1.  [symfony](src/symfony/Config/README.md "symfony") 
 	- [Basic](src/symfony/Basic/README.md) 基础和常用
@@ -98,11 +100,6 @@
 	- [Custom messages](./src/weixin/custom_message.md) 客服会话      
                 
         
-- [Shortcuts Methods](src/symfony/Controller/controller.md) 控制器中的快捷方法
-- [command](./src/symfony/command.md) 命令
-- [Guzzle](src/symfony/Basic/symfony.md) 请求接口
-- [SQL](./src/symfony/SQL.md) 数据库操作
-
 
 
 
