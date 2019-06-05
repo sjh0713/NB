@@ -58,6 +58,9 @@
 * get HOST
 
 		$request()->getHost()
+* get ClientId
+        
+        $request()->getClientId()
 
 * 获取当前路由名称
 

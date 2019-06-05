@@ -80,3 +80,9 @@
         $arr 为要排序的数组
         $last_names = array_column($arr,'field');
         array_multisort($last_names,'SORT_DESC',$arr);
+
+6. jquery序列化后进行数据提交，PHP处理方法：
+
+        $serilize = $request->request->get('serialize');
+        $data = urldecode($serilize);
+        parse_str($data,$query_arr); // 将字符串解析成多个变量

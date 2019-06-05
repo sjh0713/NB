@@ -24,3 +24,6 @@ PHP和nginx是通过php-fpm想关联的：
 lsof -i tcp:port 可以查看该端口被什么程序占用，并显示PID，方便KILL
 
 发现文件所在路径：find / -name php-fpm.conf
+
+
+php地址：/usr/local/etc/php/7.2e
