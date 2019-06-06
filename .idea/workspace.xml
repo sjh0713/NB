@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b57dd7a4-bee5-4c0e-b15a-bb1392bf886e" name="默认更改列表" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Article/ClassicSayings.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Article/ClassicSayings.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/diary/day.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/diary/2019day.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/diary/text.md" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Jquery/base.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +50,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Markdown" value="243" />
+          <entry key="Markdown" value="245" />
           <entry key="PHP" value="3" />
           <entry key="PLAIN_TEXT" value="8" />
           <entry key="SmartyConfig" value="2" />
@@ -61,7 +59,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="9148" />
+          <entry key="Markdown" value="9227" />
           <entry key="PLAIN_TEXT" value="14" />
         </counts>
       </usages-collector>
@@ -69,12 +67,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/diary/2019day.md">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Jquery/base.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="197">
-                <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="554">
+                <caret line="101" column="52" selection-start-line="101" selection-start-column="52" selection-end-line="101" selection-end-column="52" />
               </first_editor>
               <second_editor />
             </state>
@@ -133,7 +141,6 @@
         <option value="$PROJECT_DIR$/src/studyUrl.md" />
         <option value="$PROJECT_DIR$/src/symfony/README.md" />
         <option value="$PROJECT_DIR$/src/symfony/command_example.md" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/law/daily.md" />
         <option value="$PROJECT_DIR$/src/Go/Movie/var.md" />
         <option value="$PROJECT_DIR$/src/PHP/php_question.md" />
@@ -149,6 +156,7 @@
         <option value="$PROJECT_DIR$/src/diary/text.md" />
         <option value="$PROJECT_DIR$/src/Article/ClassicSayings.md" />
         <option value="$PROJECT_DIR$/src/diary/2019day.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -188,19 +196,7 @@
               <item name="cheat sheets" type="b2602c69:ProjectViewProjectNode" />
               <item name="cheat sheets" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Article" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cheat sheets" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cheat sheets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="diary" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cheat sheets" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cheat sheets" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Linux" type="462c0819:PsiDirectoryNode" />
+              <item name="Jquery" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -272,7 +268,7 @@
       <workItem from="1559449584833" duration="3726000" />
       <workItem from="1559522961723" duration="542000" />
       <workItem from="1559563972897" duration="2961000" />
-      <workItem from="1559632320592" duration="10879000" />
+      <workItem from="1559632320592" duration="11173000" />
     </task>
     <task id="LOCAL-00001" summary="note">
       <created>1555120384585</created>
@@ -470,17 +466,24 @@
       <option name="project" value="LOCAL" />
       <updated>1559728492298</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="note">
+      <created>1559784935958</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1559784935958</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116635000" />
+    <option name="totallyTimeSpent" value="116929000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49873737" visible="true" weight="0.18069667" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49873737" visible="true" weight="0.22423802" />
       <window_info id="Structure" order="1" sideWeight="0.5012626" side_tool="true" weight="0.17706822" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -533,16 +536,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="note" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/mysql/mysql.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="360">
-            <caret line="15" selection-start-line="15" selection-end-line="23" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mysql/mysql_doc.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -855,16 +848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="345">
-            <caret line="15" selection-start-line="14" selection-end-line="15" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/symfony/Basic/symfony.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -921,8 +904,26 @@
     <entry file="file://$PROJECT_DIR$/src/diary/2019day.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="197">
+          <first_editor relative-caret-position="183">
             <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Jquery/base.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="554">
+            <caret line="101" column="52" selection-start-line="101" selection-start-column="52" selection-end-line="101" selection-end-column="52" />
           </first_editor>
           <second_editor />
         </state>
