@@ -92,13 +92,14 @@
 9.  [Article](src/Linux/README.md "document") Chicken soup 鸡汤
 	- [Chicken soup](./src/Article/ClassicSayings.md) 优秀励志语句      
 
-10.  [Interview Questions](src/Interview/interview.md "document") 面试题
+10. [Interview Questions](src/Interview/interview.md "document") 面试题
 	- [Interview Questions](./src/Interview/interview.md) 常见面试题      
 
-11.  [Wechat](src/weixin/interview.md "document") 微信小程序
+11. [Wechat](src/weixin/interview.md "document") 微信小程序
 	- [Custom messages](./src/weixin/custom_message.md) 客服会话      
                 
-        
+12. [Jquery](src/Jquery/base.md)
+    - [Jquery Bash](./src/Jquery/base.md) Jquery基础知识
 
 
 
