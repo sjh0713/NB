@@ -70,8 +70,8 @@
 	- [mysql Error](./src/mysql/mysql_error.md) 数据库常见错误
 	- [Import Field](./src/mysql/mysql_error.md) Table导出字段和注释
 
-6.  [phpstorm](./src/phpstrom/phpstorm.md "phpstorm")
-    - [phpstorm](./src/phpstrom/phpstorm.md) 快捷键
+6.  [phpstorm](./src/phpstorm/phpstorm.md "phpstorm")
+    - [phpstorm](./src/phpstorm/phpstorm.md) 快捷键
 
 7.  [document](src/Linux/README.md "document")
 	- [document](./src/studyUrl.md) 文档相关链接
