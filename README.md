@@ -44,7 +44,8 @@
         - [Guzzle Base](./src/symfony/Guzzle/Guzzle.md) 基础知识        
 
 2.  [PHP](src/PHP/README.md "PHP")
-    - [PHP](./src/PHP/PHP.md) PHP相关函数
+    - [PHP](./src/PHP/PHP.md) PHP基础知识
+    - [PHP](./src/PHP/php_function.md) PHP相关函数
     - [Try catch](./src/PHP/try_catch.md) PHP异常
     - [Php Function](./src/PHP/php_question.md) PHP常用功能(常见问题)
     - [System Object](./src/PHP/System_object.md) PHP系统内置对象
