@@ -87,6 +87,7 @@
         - [Go Compile](src/Go/Movie/compile.md) GO编译运行
         - [Go Escaped](src/Go/Movie/escaped.md) 转义字符、注释、代码格式化 
         - [Data Type](src/Go/Movie/var.md) 数据类型
+        - [Operator](src/Go/Movie/yunsuanfu.md) 运算符
     - [Beego](src/Go/Beego/Beego.md "document")Beego框架
         - [Basic](src/Go/Beego/Beego.md) 基础知识    
       
