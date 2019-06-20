@@ -6,3 +6,7 @@
 创建时间转换
 
     $val->getCreateAt()->format('Y-m-d H:i:s')
+
+查询出一条数据转一维数组：
+
+    return empty($arr)?[]:$arr[0]

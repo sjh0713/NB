@@ -50,6 +50,7 @@
     - [Php Function](./src/PHP/php_question.md) PHP常用功能(常见问题)
     - [System Object](./src/PHP/System_object.md) PHP系统内置对象
     - [CSRF](./src/PHP/csrf_token.md) CSRF跨域请求
+    - [CSRF](./src/PHP/terminology.md) 专业术语
 
 3.  [GIT](src/git/base.md "PHP")
      - [Basic](src/git/base.md) 基础和常用
@@ -61,6 +62,9 @@
 	- [Mac Shortcuts](src/Linux/mac_instruct.md) Mac常用快捷键
 	- [LAMP](./src/service/mac_install_apache_php.md) Mac安装apache
 	- [LNMP](./src/service/mac_install_nginx_php.md) Mac安装nginx
+	- [LNMP](./src/service/linux_install_service.md) Linux安装nginx
+	- [LNMP](./src/service/ssh_login_service.md) 登陆服务器的shell脚本
+	- [LNMP](./src/service/Linux_install_rz.md) Linux安装支持rz和sz的服务
 	- [File Transmission](./src/Linux/Linux.md) 服务器文件和本地之间的传输
 	- [Crontab Set](./src/service/crontab.md) Linux定时任务
 	- [SSL Https](./src/service/ssl_https.md) SSL设置https协议

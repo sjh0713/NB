@@ -86,3 +86,7 @@
         $serilize = $request->request->get('serialize');
         $data = urldecode($serilize);
         parse_str($data,$query_arr); // 将字符串解析成多个变量
+
+7. 身份证号安全性设置
+
+        substr_replace($str,'*****',4,8)
