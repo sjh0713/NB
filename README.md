@@ -56,12 +56,14 @@
      - [Basic](src/git/base.md) 基础和常用
 	 - [crlf Error](./src/git/git_crlf.md) crlf报错解决
 	 - [code Commit](./src/git/git_base.md) git代码提交
+	 - [code Commit](./src/git/github.md) github常用操作
 
 4.  [Linux](src/Linux/README.md "Linux")
 	- [macdown](./src/Markdown-Syntax-CN-master/syntax.md) Macdown相关
 	- [Mac Shortcuts](src/Linux/mac_instruct.md) Mac常用快捷键
-	- [LAMP](./src/service/mac_install_apache_php.md) Mac安装apache
-	- [LNMP](./src/service/mac_install_nginx_php.md) Mac安装nginx
+	- [Mac Shortcuts](src/Linux/mac_connect_service_error.md) Mac连接服务器报错
+	- [MAMP](./src/service/mac_install_apache_php.md) Mac安装apache
+	- [MNMP](./src/service/mac_install_nginx_php.md) Mac安装nginx
 	- [LNMP](./src/service/linux_install_service.md) Linux安装nginx
 	- [LNMP](./src/service/ssh_login_service.md) 登陆服务器的shell脚本
 	- [LNMP](./src/service/Linux_install_rz.md) Linux安装支持rz和sz的服务
