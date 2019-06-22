@@ -45,7 +45,10 @@ Memcache和Redis区别
 5.	如果要说内存使用效率，使用简单的key-value存储的话，Memcached的内存利用率更高，而如果Redis采用hash结构来做key-value存储，由于其组合式的压缩，其内存利用率会高于Memcached。当然，这和你的应用场景和数据特性有关。
 6.	如果你对数据持久化和数据同步有所要求，那么推荐你选择Redis，因为这两个特性Memcached都不具备。即使你只是希望在升级或者重启系统后缓存数据不会丢失，选择Redis也是明智的。
 7.	Redis和Memcache在写入性能上面差别不大，读取性能上面尤其是批量读取性能上面Memcache更强
-
+8.  memcache服务器只支持字符串，如果存复合类型的数据，需要通过php的扩展序列化
+9.  Redis支持字符串，除此之外还支持新的数据类型：链表、哈希等结构的数据
+10. Redis支持部分数据的持久化存储
+    
 用PHP写出显示客户端IP与服务器IP的代码
 $_SERVER['SERVER_ADDR']服务器IP
 $_SERVER['REMOTE_ADDR']客户端IP
@@ -162,6 +165,11 @@ interface implements
 
 数组和字符串的函数
 
+1. 用最少的代码写一个求3值最大值的函数
+        $max = max($a ,$b $c);
+        $max = $a>$b?($a>$c?$a:$c):($b>$c?$b:$c);
+2. Javascript能否定义二维数组，如果不能你如何解决
+    1. 不能，var arr[0]=new Array();
 
 
 
