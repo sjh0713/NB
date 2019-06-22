@@ -159,7 +159,6 @@
 - 下载php7源码包
 
       #  wget -O php7.tar.gz http://cn2.php.net/get/php-7.0.1.tar.gz/from/this/mirror
-      #  wget  http://php.net/get/php-7.0.2.tar.gz/from/a/mirror
 
 - 解压源码包
 
