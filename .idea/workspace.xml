@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f8bbffd-1a2b-4163-9374-43b5d7eb7db9" name="默认更改列表" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,7 +57,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor>
-                <caret column="19" selection-start-column="19" selection-end-column="19" />
+                <caret column="80" selection-start-column="80" selection-end-column="80" />
               </first_editor>
               <second_editor />
             </state>
@@ -145,6 +146,11 @@
               <item name="cheat sheets" type="b2602c69:ProjectViewProjectNode" />
               <item name="cheat sheets" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="cheat sheets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cheat sheets" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -216,7 +222,7 @@
       <workItem from="1561107806286" duration="962000" />
       <workItem from="1561135065570" duration="30000" />
       <workItem from="1561171192536" duration="2364000" />
-      <workItem from="1561451040156" duration="725000" />
+      <workItem from="1561451040156" duration="975000" />
     </task>
     <task id="LOCAL-00001" summary="note">
       <created>1559807307672</created>
@@ -324,18 +330,18 @@
       <updated>1561451558405</updated>
     </task>
     <task id="LOCAL-00016" summary="note">
-      <created>1558746435355</created>
+      <created>1561452064354</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1558746435355</updated>
+      <updated>1561452064354</updated>
     </task>
     <task id="LOCAL-00017" summary="note">
-      <created>1558755665443</created>
+      <created>1561452267970</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1558755665443</updated>
+      <updated>1561452267970</updated>
     </task>
     <task id="LOCAL-00018" summary="note">
       <created>1558755698560</created>
@@ -435,11 +441,11 @@
       <option name="project" value="LOCAL" />
       <updated>1559785402281</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37451000" />
+    <option name="totallyTimeSpent" value="37701000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -872,7 +878,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor>
-            <caret column="19" selection-start-column="19" selection-end-column="19" />
+            <caret column="80" selection-start-column="80" selection-end-column="80" />
           </first_editor>
           <second_editor />
         </state>
