@@ -219,12 +219,37 @@
 
 - 重启nginx：
 
-        # service nginx reload
+        # service nginx reload(需要加nginx启动文件)
+        
+        或：
+        cd /usr/local/nginx/sbin/
+        ./nginx -s reload
+        
+        停止：./nginx -s stop
+        启动：/usr/local/nginx/sbin/nginx 
+        测试配置文件： ./nginx -t  
+        
+        
 - 然后就OK了。
 
+5.PHP和nginx相关联
 
+    通过nginx配置文件进行相关联
+    配置文件：
+         location / {
+                root   /usr/local/nginx/html;
+                index  index.php index.html index.htm;
+         }
 
-5.报错
+         location ~ \.php$ {
+             root           html;
+             fastcgi_pass   127.0.0.1:9000;
+             fastcgi_index  index.php;
+             fastcgi_param  SCRIPT_FILENAME  /$document_root$fastcgi_script_name;
+             include        fastcgi_params;
+         }
+
+6.报错
 - 安装nginx遇到的错误：
     - CentOS安装Nginx 报错“configure: error: the HTTP rewrite module requires the PCRE library”解决办法
 
@@ -266,7 +291,7 @@
            
           # yum -y install libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel libxml2 libxml2-devel mysql pcre-devel    
     
-6. 
+7. 
 注意这里需要再阿里云安全组中开放3306端口供公网访问
 https://www.cnblogs.com/funnyboy0128/p/7966531.html
 
