@@ -97,6 +97,29 @@
             
             Nginx会默认安装在/usr/local/nginx目录，我们cd到/usr/local/nginx/sbin/目录，存在一个Nginx二进制可执行文件。打开浏览器访问此机器的IP，看到熟悉的nginx即为成功。
 
+    - 配置nginx虚拟机：
+    
+            location ~ \.php$ {
+                        root          html;
+                        fastcgi_pass  127.0.0.1:9000;
+                        fastcgi_index  index.php;
+                        fastcgi_param  SCRIPT_FILENAME  /$document_root$fastcgi_script_name;
+                        include        fastcgi_params;
+                    }
+            将script 改为$document_root即可。
+    
+    - 重启nginx：
+    
+            # service nginx reload(需要加nginx启动文件)
+            
+            或：
+            cd /usr/local/nginx/sbin/
+            ./nginx -s reload
+            
+            停止：./nginx -s stop
+            启动：/usr/local/nginx/sbin/nginx 
+            测试配置文件： ./nginx -t  
+            
 3.mysql
 
 - 安装mysql
@@ -205,33 +228,6 @@
         启动php-fpm：
         # /etc/init.d/php-fpm start
 
-
-- 配置nginx虚拟机：
-
-        location ~ \.php$ {
-                    root          html;
-                    fastcgi_pass  127.0.0.1:9000;
-                    fastcgi_index  index.php;
-                    fastcgi_param  SCRIPT_FILENAME  /$document_root$fastcgi_script_name;
-                    include        fastcgi_params;
-                }
-        将script 改为$document_root即可。
-
-- 重启nginx：
-
-        # service nginx reload(需要加nginx启动文件)
-        
-        或：
-        cd /usr/local/nginx/sbin/
-        ./nginx -s reload
-        
-        停止：./nginx -s stop
-        启动：/usr/local/nginx/sbin/nginx 
-        测试配置文件： ./nginx -t  
-        
-        
-- 然后就OK了。
-
 5.PHP和nginx相关联
 
     通过nginx配置文件进行相关联
@@ -248,6 +244,8 @@
              fastcgi_param  SCRIPT_FILENAME  /$document_root$fastcgi_script_name;
              include        fastcgi_params;
          }
+
+- 然后就OK了
 
 6.报错
 - 安装nginx遇到的错误：
@@ -296,6 +294,7 @@
 https://www.cnblogs.com/funnyboy0128/p/7966531.html
 
 
-
+8. 重启PHP service php-fpm restart
+   修改了php.ini需要重启PHP（我的PHP.ini在/etc/php.ini ,可通过find / -name php.ini进行查找）
 
 
