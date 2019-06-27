@@ -227,6 +227,7 @@
         由于php-fpm走的是9000端口,外网是无法访问的,我们需要在nginx的配置文件中增加代理的规则，即可让用户在访问80端口，请求php的时候，交由后端的fpm去执行。
         启动php-fpm：
         # /etc/init.d/php-fpm start
+        (重启php-fpm :service php-fpm restart)
 
 5.PHP和nginx相关联
 
