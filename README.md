@@ -112,6 +112,9 @@
 13. [Read Book](src/Read/read.md)
     - [Read Book](./src/Read/read.md) 读过的书
 
+14. [Redis](src/Redis/base.md)
+    - [Redis Mac Install](./src/Redis/mac_install.md) mac安装redis
+    - [Redis Base](./src/Redis/base.md) 基础知识
 
 
 

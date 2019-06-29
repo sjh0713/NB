@@ -27,3 +27,12 @@ lsof -i tcp:port 可以查看该端口被什么程序占用，并显示PID，方
 
 
 php地址：/usr/local/etc/php/7.2e
+
+
+修改完配置文件重新启动php-fpm:
+
+    /usr/local/Cellar/php@7.2/7.2.16/sbin
+    
+    sudo killall php-fpm #关闭php-fpm
+    
+    ./php70-fpm start
