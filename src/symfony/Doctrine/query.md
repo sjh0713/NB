@@ -208,3 +208,12 @@
         $item = $groupUserRepo->findOneBy(['code'=>$val]);
         $em->remove($item);
         $em->flush();
+
+- find  
+     
+        $node = $nodeRepo->findBy([
+                'itemCode'=>$value->getCode(),
+                'groupCode'=>[30300,30400]
+            ],[
+                'groupCode'=>'Desc'
+            ]);
