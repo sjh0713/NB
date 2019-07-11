@@ -1,17 +1,17 @@
-
 #user  nobody;
-#工作进程
 worker_processes  1;
 
-#error_log  /logs/error.log;
+#error_log  logs/error.log;
 #error_log  logs/error.log  notice;
 #error_log  logs/error.log  info;
 
-#pid        logs/nginx.pid;
+pid        logs/nginx.pid;
+
 
 events {
     worker_connections  1024;
 }
+
 
 http {
     include       mime.types;
@@ -27,24 +27,23 @@ http {
     #tcp_nopush     on;
 
     #keepalive_timeout  0;
-    #过期时间
     keepalive_timeout  65;
-    #压缩
-    gzip  on;
+
+    #gzip  on;
 
     server {
         listen       80;
-        server_name  localhost;
+        server_name  xiangfumijiu.mylzn.cn;
 
         #charset koi8-r;
 
         #access_log  logs/host.access.log  main;
 
         location / {
-            root   /Users/myl/www;
+            root   /usr/local/nginx/html;
             index  index.php index.html index.htm;
         }
-	
+
         #error_page  404              /404.html;
 
         # redirect server error pages to the static page /50x.html
@@ -63,11 +62,11 @@ http {
         # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
         #
         location ~ \.php$ {
-		root           /User/myl/www;
-            	fastcgi_pass   127.0.0.1:9000;
-            	fastcgi_index  index.php;            	
-                fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-            	include        fastcgi_params; 
+            root           html;
+            fastcgi_pass   127.0.0.1:9000;
+            fastcgi_index  index.php;
+            fastcgi_param  SCRIPT_FILENAME  /$document_root$fastcgi_script_name;
+            include        fastcgi_params;
         }
 
         # deny access to .htaccess files, if Apache's document root
@@ -77,8 +76,6 @@ http {
         #    deny  all;
         #}
     }
-
-
     # another virtual host using mix of IP-, name-, and port-based configuration
     #
     #server {
@@ -113,7 +110,5 @@ http {
     #        index  index.html index.htm;
     #    }
     #}
-    
-   #引入servers服务文件 
-   include servers/*;
+    #include servers/*;
 }

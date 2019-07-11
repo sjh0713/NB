@@ -90,3 +90,20 @@
 7. 身份证号安全性设置
 
         substr_replace($str,'*****',4,8)
+
+8. 以某个字段进行去重复
+        
+        //二维数组以某个字段进行去重
+        $result = array();
+        foreach($data as $k=>$val){
+            $code = false;
+            foreach($result as $_val){
+                if($_val['id'] == $val['id']){
+                    $code = true;
+                    break;
+                }
+            }
+            if(!$code){
+                $result[]=$val;
+            }
+        }
