@@ -115,6 +115,7 @@
 14. [Redis](src/Redis/base.md)
     - [Redis Mac Install](./src/Redis/mac_install.md) mac安装redis
     - [Redis Base](./src/Redis/base.md) 基础知识
+    - [List](./src/Redis/list.md) 列表实现队列和栈的性能
 
 
 
