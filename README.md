@@ -59,6 +59,7 @@
 	 - [code Commit](./src/git/github.md) github常用操作
 
 4.  [Linux](src/Linux/README.md "Linux")
+    - [Base](./src/Linux/base.md) 基础知识
 	- [macdown](./src/Markdown-Syntax-CN-master/syntax.md) Macdown相关
 	- [Mac Shortcuts](src/Linux/mac_instruct.md) Mac常用快捷键
 	- [Mac Shortcuts](src/Linux/mac_connect_service_error.md) Mac连接服务器报错
