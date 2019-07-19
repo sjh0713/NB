@@ -57,6 +57,7 @@
 	 - [crlf Error](./src/git/git_crlf.md) crlf报错解决
 	 - [code Commit](./src/git/git_base.md) git代码提交
 	 - [code Commit](./src/git/github.md) github常用操作
+	 - [code Commit](./src/git/composer_error.md) git常见错误
 
 4.  [Linux](src/Linux/README.md "Linux")
     - [Base](./src/Linux/base.md) 基础知识
