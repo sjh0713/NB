@@ -21,3 +21,6 @@
         
         $ git config --global core.autocrlf false
 
+
+[myl@mayuliangdeMacBook-Pro ~/www/experts]$git config core.autocrlf false
+[myl@mayuliangdeMacBook-Pro ~/www/experts]$git config core.safecrlf false

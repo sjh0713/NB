@@ -10,36 +10,46 @@
    	- [Twig](src/symfony/Twig/twig.md) Twig相关
    		- [Twig](./src/symfony/Twig/twig.md) Twig基础
         - [Twig Extension](./src/symfony/Twig/extension.md) Twig扩展示例
+        
     - [Form](src/symfony/From/base.md) 表单相关
         - [Form Base](./src/symfony/From/base.md) 表单基础知识
         - [FormBuilder examples](./src/symfony/From/form_build.md) 表单构造器示例
         - [Form examples](./src/symfony/From/example.md) 表单完整示例
         - [Validation Note](./src/symfony/From/validation.md) 表单验证相关
+        
     - [Doctrine](src/symfony/Doctrine/base.md) Doctrine相关
         - [Doctrine](./src/symfony/Doctrine/base.md) Doctrine基础知识
         - [QueryBuilder examples](./src/symfony/Doctrine/query.md) 查询构造器示例
         - [Doctrine Type](./src/symfony/Doctrine/field.md) Doctrine字段类型
         - [An Entity Demo](./src/symfony/Doctrine/demo.md) 一个略复杂的Entity的示例
+        - [Doctrine DQL](./src/symfony/Doctrine/dql.md) doctrine自定义DQL函数
+        
    	- [Router](src/symfony/Route/base.md) 路由相关
         - [Twig Extension](./src/symfony/Route/base.md) 路由基础
+        
     - [Command](src/symfony/Command/console.md) 命令相关
         - [Console Command](./src/symfony/Command/console.md) 常用的console命令
         - [Command call Command](./src/symfony/Command/command.md) command之间调用
         - [Command in Controller](./src/symfony/Command/controller.md) 控制器中调用command
         - [Custom Command](./src/symfony/Command/custom.md) 自定义Command 案例1
         - [Command Example](./src/symfony/Command/command_example.md) 自定义Command 案例2
+        
     - [Service](src/symfony/Service/base.md) 服务
         - [Service Base](./src/symfony/Service/base.md) 服务基础知识             
         - [Service Upload](./src/symfony/ServiceEg/uploadFileService.md) 文件上传
         - [Service Download](./src/symfony/ServiceEg/download.md) 文件下载
         - [Service Example](./src/symfony/ServiceEg/README.md) 服务案例（文件上传、下载）
+        
    	- [Error](src/symfony/Error/error.md) 常见错误
-        - [Common Error](./src/symfony/Error/error.md) 常见错误        
+        - [Common Error](./src/symfony/Error/error.md) 常见错误  
+              
    	- [Config](src/symfony/Config/firewall.md) 配置
-        - [Firewall Config](./src/symfony/Config/firewall.md) 防火墙配置        
+        - [Firewall Config](./src/symfony/Config/firewall.md) 防火墙配置    
+            
    	- [Controller](src/symfony/Controller/controller.md) 控制器
         - [Controller Base](./src/symfony/Controller/controller.md) 控制器常用操作        
         - [Request Type](./src/symfony/Controller/Repository.md) 请求方式      
+        
    	- [Guzzle](src/symfony/Guzzle/Guzzle.md) Guzzle HTTP客户端
         - [Guzzle Base](./src/symfony/Guzzle/Guzzle.md) 基础知识        
 
@@ -51,13 +61,14 @@
     - [System Object](./src/PHP/System_object.md) PHP系统内置对象
     - [CSRF](./src/PHP/csrf_token.md) CSRF跨域请求
     - [CSRF](./src/PHP/terminology.md) 专业术语
+    - [Time](./src/PHP/time.md) 常用时间段
 
 3.  [GIT](src/git/base.md "PHP")
      - [Basic](src/git/base.md) 基础和常用
-	 - [crlf Error](./src/git/git_crlf.md) crlf报错解决
-	 - [code Commit](./src/git/git_base.md) git代码提交
-	 - [code Commit](./src/git/github.md) github常用操作
-	 - [code Commit](./src/git/composer_error.md) git常见错误
+	 - [Crlf Error](./src/git/git_crlf.md) crlf报错解决
+	 - [Code Commit](./src/git/git_base.md) git代码提交
+	 - [Github Operation](./src/git/github.md) github常用操作
+	 - [Git Error](./src/git/composer_error.md) git常见错误
 
 4.  [Linux](src/Linux/README.md "Linux")
     - [Base](./src/Linux/base.md) 基础知识
