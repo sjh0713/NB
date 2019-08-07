@@ -107,7 +107,10 @@
         - [Go Escaped](src/Go/Movie/escaped.md) 转义字符、注释、代码格式化 
         - [Data Type](src/Go/Movie/var.md) 数据类型
         - [Operator](src/Go/Movie/yunsuanfu.md) 运算符
-    - [Beego](src/Go/Beego/Beego.md "document")Beego框架
+        - [Process Control](src/Go/Movie/processControl.md) 流程控制
+        - [String](src/Go/Movie/string.md) 字符串
+        
+    - [Beego](src/Go/Beego/Beego.md "document") Beego框架
         - [Basic](src/Go/Beego/Beego.md) 基础知识    
       
 9.  [Article](src/Linux/README.md "document") Chicken soup 鸡汤

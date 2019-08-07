@@ -10,6 +10,8 @@ Go语言、Unix、C语言、be开发者是：肯.汤普森
 
 静态类型的编译型语言，安全和性能，动态开发语言开发维护的高效
 
+SDK 就是软件开发工具包。我们做 Go 开发，首先需要先安装并配置好 sdk.
+
 mac安装了ssh服务，默认情况下不会开机自启动：
 
     启动：sudo launchctl -w /System/Library/LaunchDaemons/ssh.plist
@@ -38,7 +40,19 @@ Go程序开发注意事项：
 
 Golang官方标准API文档
 
+    https://golang.org
     https://golang.google.cn/
     中文文档：https://studygolong.com/pkgdoc 
 
+注释
+    
+    注释提高了代码的阅读性
+    注释是一个程序员必须要具有的良好编程习惯。将自己的思想通过注释先整理出来，再用代码去 体现
+    
+    golang中注释有两种形式：
+    1.行注释   //注释内容
+    2.块注释   /*     */ 块注释里面不能有块注释嵌套
 
+go和其他语言的区别：
+    
+    函数可以返回多个值
