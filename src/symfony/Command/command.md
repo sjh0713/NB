@@ -1,5 +1,9 @@
 ## Command call Command
 
+- 注意
+    
+      定时任务一定要考虑清楚逻辑，考虑全面，如果出了问题，后果很严重，一定要把该加的限制的加上，尤其是时间限制
+        
 - 示例1
 
       protected function execute(InputInterface $input, OutputInterface $output)
