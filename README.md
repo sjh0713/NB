@@ -109,6 +109,9 @@
         - [Operator](src/Go/Movie/yunsuanfu.md) 运算符
         - [Process Control](src/Go/Movie/processControl.md) 流程控制
         - [String](src/Go/Movie/string.md) 字符串
+        - [Slice](src/Go/Movie/slice.md) 切片 --20190819
+        - [Init](src/Go/Movie/init.md) init函数 --20190819
+        - [Anonymity](src/Go/Movie/anonymity.md) 匿名函数 --20190819
         
     - [Beego](src/Go/Beego/Beego.md "document") Beego框架
         - [Basic](src/Go/Beego/Beego.md) 基础知识    
