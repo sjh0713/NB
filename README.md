@@ -106,12 +106,15 @@
         - [Var](src/Go/Base/var.md) 变量
         - [String](src/Go/Base/string.md) 字符串
         - [Slice](src/Go/Base/slice.md) 切片 --20190819
+        - [Date](src/Go/Base/date.md) 时间和日期函数 --20190820
+        - [Date](src/Go/Base/array.md) 数组 --20190820
         - [Process Control](src/Go/Base/processControl.md) 流程控制
    
     - [Function](src/Go/Base/base.md "document") 函数
         - [Init](src/Go/Function/init.md) init函数 --20190819
         - [Anonymity](src/Go/Function/anonymity.md) 匿名函数 --20190819
-        - [Anonymity](src/Go/Function/bibao.md) 闭包 --20190819
+        - [Bibao](src/Go/Function/bibao.md) 闭包 --20190819
+        - [Defer](src/Go/Function/defer.md) 延时机制 --20190820
       
 9.  [Article](src/Linux/README.md "document") Chicken soup 鸡汤
 	- [Chicken soup](./src/Article/ClassicSayings.md) 优秀励志语句      
