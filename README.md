@@ -84,9 +84,10 @@
 	- [Crontab Set](./src/service/crontab.md) Linux定时任务
 	- [SSL Https](./src/service/ssl_https.md) SSL设置https协议
 
-5.  [MYSQL](src/Linux/README.md "MYSQL")	
+5.  [MYSQL](src/Linux/README.md "MYSQL") 
+    - [mysql Import and export](./src/mysql/base.md) 数据库基本操作
+    - [mysql CRUD](./src/mysql/crud.md) 数据库增删改查
 	- [mysql Import and export](./src/mysql/mysql.md) 数据库导入导出操作
-	- [mysql CRUD](./src/mysql/mysql.md) 数据库增删改查
 	- [mysql Error](./src/mysql/mysql_error.md) 数据库常见错误
 	- [Import Field](./src/mysql/mysql_error.md) Table导出字段和注释
 
@@ -135,6 +136,7 @@
     - [Redis Mac Install](./src/Redis/mac_install.md) mac安装redis
     - [Redis Base](./src/Redis/base.md) 基础知识
     - [List](./src/Redis/list.md) 列表实现队列和栈的性能
+    - [Study URL](./src/Redis/list.md) redis学习地址
 
 
 
