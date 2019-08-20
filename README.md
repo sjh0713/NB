@@ -112,6 +112,7 @@
         - [Slice](src/Go/Movie/slice.md) 切片 --20190819
         - [Init](src/Go/Movie/init.md) init函数 --20190819
         - [Anonymity](src/Go/Movie/anonymity.md) 匿名函数 --20190819
+        - [Anonymity](src/Go/Movie/bibao.md) 闭包 --20190819
         
     - [Beego](src/Go/Beego/Beego.md "document") Beego框架
         - [Basic](src/Go/Beego/Beego.md) 基础知识    
