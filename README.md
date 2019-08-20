@@ -97,25 +97,21 @@
 	- [document](./src/studyUrl.md) 文档相关链接
 
 8.  [GO](src/Go/README.md "document")
-    - [Basic](src/Go/Basic/basic.md) 《Go语言编程入门与实战技巧》
-        - [Basic](src/Go/Basic/basic.md) 基础知识
-        - [Data Type](src/Go/Basic/data_type.md) 数据类型
-        - [Function](src/Go/Basic/function.md) 函数
-    - [Movie](src/Go/Movie/base.md "document") 韩顺平整套视频课程笔记
-        - [Basic](src/Go/Movie/base.md) 基础知识
-        - [Go Compile](src/Go/Movie/compile.md) GO编译运行
-        - [Go Escaped](src/Go/Movie/escaped.md) 转义字符、注释、代码格式化 
-        - [Data Type](src/Go/Movie/var.md) 数据类型
-        - [Operator](src/Go/Movie/yunsuanfu.md) 运算符
-        - [Process Control](src/Go/Movie/processControl.md) 流程控制
-        - [String](src/Go/Movie/string.md) 字符串
-        - [Slice](src/Go/Movie/slice.md) 切片 --20190819
-        - [Init](src/Go/Movie/init.md) init函数 --20190819
-        - [Anonymity](src/Go/Movie/anonymity.md) 匿名函数 --20190819
-        - [Anonymity](src/Go/Movie/bibao.md) 闭包 --20190819
-        
-    - [Beego](src/Go/Beego/Beego.md "document") Beego框架
-        - [Basic](src/Go/Beego/Beego.md) 基础知识    
+    - [Basic](src/Go/Basic/basic.md) 基础知识
+        - [Basic](src/Go/Base/base.md) 基础知识
+        - [Go Compile](src/Go/Base/compile.md) GO编译运行
+        - [Go Escaped](src/Go/Base/escaped.md) 转义字符、注释、代码格式化 
+        - [Data Type](src/Go/Base/var.md) 数据类型 
+        - [Operator](src/Go/Base/yunsuanfu.md) 运算符
+        - [Var](src/Go/Base/var.md) 变量
+        - [String](src/Go/Base/string.md) 字符串
+        - [Slice](src/Go/Base/slice.md) 切片 --20190819
+        - [Process Control](src/Go/Base/processControl.md) 流程控制
+   
+    - [Function](src/Go/Base/base.md "document") 函数
+        - [Init](src/Go/Function/init.md) init函数 --20190819
+        - [Anonymity](src/Go/Function/anonymity.md) 匿名函数 --20190819
+        - [Anonymity](src/Go/Function/bibao.md) 闭包 --20190819
       
 9.  [Article](src/Linux/README.md "document") Chicken soup 鸡汤
 	- [Chicken soup](./src/Article/ClassicSayings.md) 优秀励志语句      
