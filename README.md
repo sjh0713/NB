@@ -51,7 +51,10 @@
         - [Request Type](./src/symfony/Controller/Repository.md) 请求方式      
         
    	- [Guzzle](src/symfony/Guzzle/Guzzle.md) Guzzle HTTP客户端
-        - [Guzzle Base](./src/symfony/Guzzle/Guzzle.md) 基础知识        
+        - [Guzzle Base](./src/symfony/Guzzle/Guzzle.md) 基础知识  
+         
+    - [Case](src/symfony/Case/case.md) 常用功能、案例
+        - [Expert](./src/symfony/Case/expert.md) 导出 
 
 2.  [PHP](src/PHP/README.md "PHP")
     - [PHP](./src/PHP/PHP.md) PHP基础知识
@@ -112,10 +115,10 @@
         - [Process Control](src/Go/Base/processControl.md) 流程控制
    
     - [Function](src/Go/Base/base.md "document") 函数
-        - [Init](src/Go/Function/init.md) init函数 --20190819
-        - [Anonymity](src/Go/Function/anonymity.md) 匿名函数 --20190819
-        - [Bibao](src/Go/Function/bibao.md) 闭包 --20190819
-        - [Defer](src/Go/Function/defer.md) 延时机制 --20190820
+        - [Init](src/Go/Function/init.md) init函数
+        - [Anonymity](src/Go/Function/anonymity.md) 匿名函数
+        - [Bibao](src/Go/Function/bibao.md) 闭包
+        - [Defer](src/Go/Function/defer.md) 延时机制
       
 9.  [Article](src/Linux/README.md "document") Chicken soup 鸡汤
 	- [Chicken soup](./src/Article/ClassicSayings.md) 优秀励志语句      
