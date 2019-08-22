@@ -84,7 +84,7 @@
 	- [LNMP](./src/service/ssh_login_service.md) 登陆服务器的shell脚本
 	- [LNMP](./src/service/Linux_install_rz.md) Linux安装支持rz和sz的服务
 	- [File Transmission](./src/Linux/Linux.md) 服务器文件和本地之间的传输
-	- [Crontab Set](./src/service/crontab.md) Linux定时任务
+	- [Crontab Set](./src/service/crontab.md) Linux定时任
 	- [SSL Https](./src/service/ssl_https.md) SSL设置https协议
 
 5.  [MYSQL](src/Linux/README.md "MYSQL") 
